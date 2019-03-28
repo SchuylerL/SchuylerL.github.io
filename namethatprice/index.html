@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Hackathon Page</title>
+  <title>Name that Price</title>
   <link href="style.css" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
@@ -15,21 +15,32 @@
       <!-- empty for now -->
     </header>
     <section class="main">
-      <h3 class="main-title">Name that Price!</h3>
+      <h4 class="main-title">Name that Price!</h4>
 
       <!-- src="https://www.ready.gov/kids/games/data/dm-english/scenes/wildfire/start.png" -->
-      <img id="img01" />
-
-      <form class="form" autocomplete="off">
-        <!-- Name that Price!<br /> -->
-        $ <input type="text" name="price" id="priceEntry" /><br />
-      </form>
-
-      <button type="button" id="button01">Next</button>
-      <button type="button" id="button02">Enter Answer</button>
       <div class="description" id="basicH2"></div>
 
-      <div class="description" id="basicH1"></div>
+      <div style="width: 100%;">
+        <div style="float:left; width: 55%">
+          <div class="description" id="basicH1"></div>
+          <img id="img01" /><br />
+        </div>
+        <div style="float:right;">
+          <br /><br /><br />
+
+          <form class="form" autocomplete="off">
+            <!-- Name that Price!<br /> -->
+
+            $ <input type="text" name="price" id="priceEntry" /><br />
+          </form>
+          <button type="button" id="button02">Submit Answer</button><br />
+          <button type="button" id="button01">Next</button> <br />
+          <br /><br /><br /><br />
+        </div>
+      </div>
+      <div style="clear:both"></div>
+
+      <!-- <div class="description" id="basicH2"></div> -->
     </section>
   </div>
   <!-- ---------------------- -->

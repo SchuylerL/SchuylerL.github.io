@@ -12,6 +12,8 @@ fetch(
     let imageArr = [];
     let priceArr = [];
     let descriptionArr = [];
+    // let yes,
+    // no = 0;
 
     //fill arrays with API data
     for (let i = 0; i < objectArray.length; i++) {
@@ -47,11 +49,10 @@ fetch(
     };
 
     function changeH1() {
-      // let num = Math.floor(Math.random() * imageArr.length);
-
-      let button02 = document.getElementById("button02");
+      //let button02 = document.getElementById("button02");
 
       let count = Math.floor(Math.random() * imageArr.length);
+
       image01.src = imageArr[count];
       basicH1.innerHTML = descriptionArr[count];
       basicH2.innerHTML = "";
@@ -61,25 +62,30 @@ fetch(
           Number(document.getElementById("priceEntry").value) <=
             priceArr[count] &&
           Number(document.getElementById("priceEntry").value) >=
-            priceArr[count] - 40
+            priceArr[count] - 20
         ) {
           basicH2.innerHTML =
-            "Correct! Entered: $" +
-            document.getElementById("priceEntry").value +
-            "  Actual Price: $" +
-            priceArr[count];
-          // right++;
-        } else
-          basicH2.innerHTML =
-            "Try Again: $" +
-            document.getElementById("priceEntry").value +
-            "  Actual Price: $" +
-            priceArr[count];
-        // wrong++;
+            "Correct: $" +
+            Number(document.getElementById("priceEntry").value).toFixed(2) +
+            "  -  Actual: $" +
+            priceArr[count].toFixed(2);
+          // yes++;
+        } else {
+          let wrong =
+            "Incorrect: $" +
+            Number(document.getElementById("priceEntry").value).toFixed(2) +
+            "  -  Actual: $" +
+            priceArr[count].toFixed(2);
+          // wrong = wrong.style.color = "rgb(0, 255, 255)";
+          // console.log(document.getElementById("priceEntry").value);
+
+          basicH2.innerHTML = wrong;
+        }
+        // .style.color = "rgb(0, 255, 255)";
       };
     }
-    // console.log(right);
-    // console.log(wrong);
+    // console.log(yes);
+    // console.log(no);
 
     // console.log(typeof priceArr[count]);
     // let value = Number(document.getElementById("priceEntry").value);

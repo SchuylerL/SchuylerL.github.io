@@ -23,8 +23,8 @@ h6 {
 .container {
   margin: 25px auto;
   background: rgb(197, 222, 234); /* Old browsers */
-  width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 100%;
   border: 4px solid white;
   background: -moz-linear-gradient(
     top,
@@ -61,45 +61,55 @@ h6 {
 }
 
 img {
-  display: block;
+  /* display: block; */
   margin-left: auto;
   margin-right: auto;
   /* margin-bottom: auto; */
-  width: 25%;
-  height: 25%;
+  /* position: relative; */
+  vertical-align: top;
+  width: 40%;
+  height: 40%;
+  /* float: left; */
   /* border: 2px solid white; */
   padding: auto;
   /* background-color: white; */
 }
 
 .description {
-  color: white;
-  font-size: 1.2em;
+  color: black;
+  font-size: 1.4em;
   width: 50% auto;
   margin: 20px;
+  text-decoration: underline;
+  /* background-color: #fff; */
+  /* border: black; */
+  /* border-width: inherit; */
+  /* border-style: inherit; */
 }
 
 .form {
   padding-bottom: 10px;
   font-size: 2.2em;
-  color: #fff;
+  color: rgb(58, 58, 58);
 }
 
 input[type="text"] {
-  width: 40%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 
 .button,
 #button01,
 #button02 {
+  /* position: top; */
+  vertical-align: top;
   color: rgb(252, 255, 238);
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 22px;
   padding: 10px;
   border-radius: 0px;
   font-family: Montserrat, serif;
