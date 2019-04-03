@@ -12,8 +12,6 @@ fetch(
     let imageArr = [];
     let priceArr = [];
     let descriptionArr = [];
-    // let yes,
-    // no = 0;
 
     //fill arrays with API data
     for (let i = 0; i < objectArray.length; i++) {
@@ -22,24 +20,15 @@ fetch(
       priceArr.push(arr[i].salePrice);
       descriptionArr.push(arr[i].name);
     }
-    //return priceArr;
-    //console.log(imageArr, priceArr, descriptionArr);
 
-    //---------------------------------------------
-
-    // let count = Math.floor(Math.random());
-    // let count = 0;
     //blueButton.addEventListener("mouseover", makeBlue);
-    // let image01 = document.getElementById("img01");
     //let blueButton = document.getElementById("blueButton");
+    // let image01 = document.getElementById("img01");
 
     let basicH1 = document.getElementById("basicH1");
     let basicH2 = document.getElementById("basicH2");
     let image01 = document.getElementById("img01");
     let button01 = document.getElementById("button01");
-    //let entered = document.getElementById("priceEntry");
-    // let right,
-    //   wrong = 0;
 
     button01.addEventListener("click", changeH1());
     // button02.addEventListener("click", changeH1());
@@ -69,33 +58,18 @@ fetch(
             Number(document.getElementById("priceEntry").value).toFixed(2) +
             "  -  Actual: $" +
             priceArr[count].toFixed(2);
-          // yes++;
         } else {
           let wrong =
             "Incorrect: $" +
             Number(document.getElementById("priceEntry").value).toFixed(2) +
             "  -  Actual: $" +
             priceArr[count].toFixed(2);
-          // wrong = wrong.style.color = "rgb(0, 255, 255)";
           // console.log(document.getElementById("priceEntry").value);
 
           basicH2.innerHTML = wrong;
         }
-        // .style.color = "rgb(0, 255, 255)";
       };
     }
-    // console.log(yes);
-    // console.log(no);
-
-    // console.log(typeof priceArr[count]);
-    // let value = Number(document.getElementById("priceEntry").value);
-
-    // console.log("Correct! Price = $" + priceArr[count]);
-    // console.log(Number(document.getElementById("priceEntry").value));
-    // console.log(typeof priceArr[count]);
-
-    //let image01 = document.getElementById("img01");
-    //let image02 = document.getElementById("img02");
 
     // function makeBlue() {
     //   if (basicH1.classList.contains("blue")) {
