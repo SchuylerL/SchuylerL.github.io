@@ -80,6 +80,8 @@ img {
   font-size: 1.4em;
   width: 50% auto;
   margin: 20px;
+  /* animation: colorchange 3s infinite alternate;
+  -webkit-animation: colorchange 3s infinite alternate; */
   /* text-decoration: underline; */
   /* background-color: #fff; */
   /* border: black; */
@@ -124,12 +126,12 @@ input[type="text"] {
   display: inline-block;
   margin-bottom: 20px;
   color: #313131;
-  animation: colorchange 3s infinite alternate;
-  -webkit-animation: colorchange 3s infinite alternate;
+  animation: colorchange 2s infinite alternate;
+  -webkit-animation: colorchange 2s infinite alternate;
 }
 @keyframes colorchange {
   from {
-    background-color: white;
+    background-color: #008d97;
   }
   to {
     background-color: #144e75;
@@ -138,7 +140,7 @@ input[type="text"] {
 }
 @-webkit-keyframes colorchange {
   from {
-    background-color: white;
+    background-color: #008d97;
   }
   to {
     background-color: #144e75;
