@@ -69,7 +69,7 @@ fetch(
       basicH2.innerHTML = "";
       basicH3.innerHTML = "";
       // button01.innerHTML = "";
-      document.getElementById("priceEntry").value = "";
+      document.getElementById("priceEntry").value = "Within $20";
 
       document.getElementById("button02").onclick = function() {
         basicH2.innerHTML = "";
