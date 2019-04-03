@@ -27,8 +27,11 @@ fetch(
 
     let basicH1 = document.getElementById("basicH1");
     let basicH2 = document.getElementById("basicH2");
+    let basicH3 = document.getElementById("basicH3");
     let image01 = document.getElementById("img01");
     let button01 = document.getElementById("button01");
+    let yes = 0,
+      no = 0;
 
     button01.addEventListener("click", changeH1());
     // button02.addEventListener("click", changeH1());
@@ -45,8 +48,13 @@ fetch(
       image01.src = imageArr[count];
       basicH1.innerHTML = descriptionArr[count];
       basicH2.innerHTML = "";
+      basicH3.innerHTML = "";
+      // button01.innerHTML = "";
+      document.getElementById("priceEntry").value = "";
 
       document.getElementById("button02").onclick = function() {
+        basicH2.innerHTML = "";
+        basicH3.innerHTML = "";
         if (
           Number(document.getElementById("priceEntry").value) <=
             priceArr[count] &&
@@ -54,21 +62,23 @@ fetch(
             priceArr[count] - 20 &&
           Number(document.getElementById("priceEntry").value) !== 0
         ) {
+          yes++;
           basicH2.innerHTML =
-            "Correct: $" +
+            yes +
+            " Correct: $" +
             Number(document.getElementById("priceEntry").value).toFixed(2) +
             "  -  Actual: $" +
             priceArr[count].toFixed(2);
         } else {
-          let wrong =
-            "Incorrect: $" +
+          no++;
+          basicH3.innerHTML =
+            no +
+            " Incorrect: $" +
             Number(document.getElementById("priceEntry").value).toFixed(2) +
             "  -  Actual: $" +
             priceArr[count].toFixed(2);
-          // console.log(document.getElementById("priceEntry").value);
-
-          basicH2.innerHTML = wrong;
         }
+        document.getElementById("priceEntry").value = "";
       };
     }
 

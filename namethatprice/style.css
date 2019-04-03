@@ -88,6 +88,18 @@ img {
   /* border-width: inherit; */
   /* border-style: inherit; */
 }
+.reddescription {
+  color: red;
+  font-size: 1.4em;
+  width: 50% auto;
+  margin: 20px;
+}
+.greendescription {
+  color: green;
+  font-size: 1.4em;
+  width: 50% auto;
+  margin: 20px;
+}
 
 .form {
   padding-bottom: 10px;
@@ -126,8 +138,8 @@ input[type="text"] {
   display: inline-block;
   margin-bottom: 20px;
   color: #313131;
-  animation: colorchange 2s infinite alternate;
-  -webkit-animation: colorchange 2s infinite alternate;
+  /* animation: colorchange 2s infinite alternate;
+  -webkit-animation: colorchange 2s infinite alternate; */
 }
 @keyframes colorchange {
   from {
