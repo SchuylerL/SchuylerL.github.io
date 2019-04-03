@@ -51,7 +51,8 @@ fetch(
           Number(document.getElementById("priceEntry").value) <=
             priceArr[count] &&
           Number(document.getElementById("priceEntry").value) >=
-            priceArr[count] - 20
+            priceArr[count] - 20 &&
+          Number(document.getElementById("priceEntry").value) !== 0
         ) {
           basicH2.innerHTML =
             "Correct: $" +
