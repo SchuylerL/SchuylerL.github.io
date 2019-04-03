@@ -1,6 +1,6 @@
 //const fetch = require("node-fetch");
 fetch(
-  "https://api.bestbuy.com/v1/products(offers.type=deal_of_the_day)?apiKey=gO92rmSFU1CQOz9KzxHi7LQm&format=json&pageSize=15&show=name,image,salePrice&sort=bestSellingRank"
+  "https://api.bestbuy.com/v1/products(offers.type=deal_of_the_day)?apiKey=gO92rmSFU1CQOz9KzxHi7LQm&format=json&pageSize=15&show=name,image,salePrice,url&sort=bestSellingRank"
 )
   .then(function(response) {
     return response.json();
@@ -12,6 +12,7 @@ fetch(
     let imageArr = [];
     let priceArr = [];
     let descriptionArr = [];
+    let urlArr = [];
 
     //fill arrays with API data
     for (let i = 0; i < objectArray.length; i++) {
@@ -19,6 +20,7 @@ fetch(
       imageArr.push(arr[i].image);
       priceArr.push(arr[i].salePrice);
       descriptionArr.push(arr[i].name);
+      urlArr.push(arr[i].url);
     }
 
     //blueButton.addEventListener("mouseover", makeBlue);
@@ -36,17 +38,34 @@ fetch(
     button01.addEventListener("click", changeH1());
     // button02.addEventListener("click", changeH1());
 
+    //$("priceEntry").keydown(false);
+
+    // // Get the input field
+    // var input = document.getElementById("priceEntry");
+
+    // // Execute a function when the user releases a key on the keyboard
+    // input.addEventListener("keyup", function(event) {
+    //   // Number 13 is the "Enter" key on the keyboard
+    //   if (event.keyCode === 13) {
+    //     // Cancel the default action, if needed
+    //     event.preventDefault();
+    //     // Trigger the button element with a click
+    //     //document.getElementById("button02").click();
+    //   }
+    // });
+
     document.getElementById("button01").onclick = function() {
       changeH1();
     };
 
     function changeH1() {
       //let button02 = document.getElementById("button02");
-
+      let storelink = "Store Link";
       let count = Math.floor(Math.random() * imageArr.length);
 
       image01.src = imageArr[count];
-      basicH1.innerHTML = descriptionArr[count];
+      basicH1.innerHTML =
+        descriptionArr[count] + " (" + storelink.link(urlArr[count]) + ")";
       basicH2.innerHTML = "";
       basicH3.innerHTML = "";
       // button01.innerHTML = "";
@@ -55,6 +74,7 @@ fetch(
       document.getElementById("button02").onclick = function() {
         basicH2.innerHTML = "";
         basicH3.innerHTML = "";
+
         if (
           Number(document.getElementById("priceEntry").value) <=
             priceArr[count] &&
@@ -70,7 +90,7 @@ fetch(
             "  -  Actual: $" +
             priceArr[count].toFixed(2);
         } else {
-          no++;
+          if (Number(document.getElementById("priceEntry").value) !== 0) no++;
           basicH3.innerHTML =
             no +
             " Incorrect: $" +

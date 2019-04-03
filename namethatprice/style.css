@@ -138,8 +138,8 @@ input[type="text"] {
   display: inline-block;
   margin-bottom: 20px;
   color: #313131;
-  /* animation: colorchange 2s infinite alternate;
-  -webkit-animation: colorchange 2s infinite alternate; */
+  animation: colorchange 10s infinite alternate;
+  -webkit-animation: colorchange 10s infinite alternate;
 }
 @keyframes colorchange {
   from {
