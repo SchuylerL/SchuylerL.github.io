@@ -1,0 +1,72 @@
+  /* button[disabled] {
+            background-color: grey;
+        } */
+  button {
+      background-color: dodgerblue;
+      border: solid 1px dodgerblue;
+      color: white;
+  }
+
+  body {
+      /* background-color: lightgrey; */
+      color: dodgerblue;
+  }
+
+  header {
+      /* display: flex; */
+      display: block;
+      font-size: 2em;
+      margin-top: 0.67em;
+      margin-bottom: 0.67em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+      border-bottom: solid 1px dodgerblue;
+
+  }
+
+  h3 {
+      background-color: dodgerblue;
+      color: white;
+      border: solid 1px dodgerblue;
+      border-radius: 100%;
+      width: 100px;
+      /* height: 20px; */
+  }
+
+  div #person {
+      width: 40%;
+      font-weight: bold;
+      border: solid 1px dodgerblue;
+      border-bottom: 0;
+      /* border-top: 0; */
+  }
+
+  div #personbtm {
+      width: 40%;
+      font-weight: bold;
+      border: solid 1px dodgerblue;
+      /* border-bottom: 0; */
+      border-top: 0;
+  }
+
+  div #persontop {
+      width: 40%;
+      font-weight: bold;
+      border: solid 1px dodgerblue;
+      border-bottom: 0;
+      border-top: 0;
+  }
+
+  h2 #personbox {
+      width: 40%;
+      font-weight: bold;
+      border-bottom: solid 1px dodgerblue;
+      /* border-bottom: 0; */
+      /* border-top: 0; */
+  }
+
+  /* 
+        li {
+            background-color: white;
+        } */
