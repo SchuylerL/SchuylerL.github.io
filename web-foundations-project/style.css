@@ -34,6 +34,10 @@
       /* height: 20px; */
   }
 
+  .zero {
+      background-color: red;
+  }
+
   div #person {
       width: 40%;
       font-weight: bold;
