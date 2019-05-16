@@ -70,30 +70,24 @@ render();
 const template = data => `
             <center>
             <div id='person'>
-                <h3 id='personbox'>Moe</h2>
-                <button data-action='dec'>-</button>               
-                 Foo: ${data.customers.Moe.Foo}
-                <button data-action='inc'>+</button>
+                <h3 id='personbox'>Moe</h3>
+                <button data-action='dec'>-</button>Foo: ${data.customers.Moe.Foo}<button data-action='inc'>+</button>
             </div>
             <div id='persontop'>
                 <br />
-                <button data-action2='dec'>-</button>                
-                Bar: ${data.customers.Moe.Bar}
-                <button data-action2='inc'>+</button>
+                <button data-action2='dec'>-</button>Bar: ${data.customers.Moe.Bar}<button data-action2='inc'>+</button>
             </div>
             <div id='personbtm'>
                 <br />
-                <button data-action3='dec'>-</button>                
-                Bazz: ${data.customers.Moe.Bazz}
-                <button data-action3='inc'>+</button>
-            <br /><br />
+                <button data-action3='dec'>-</button>Bazz: ${data.customers.Moe.Bazz}<button data-action3='inc'>+</button>
+            <br />
             </div>
             </center>
             `;
 const template2 = data => `
             <center>
             <div id='person'>
-                <h3 id='personbox'>Larry</h2>
+                <h3 id='personbox'>Larry</h3>
                 <button data-action='dec'>-</button>               
                 Foo: ${data.customers.Larry.Foo}
                 <button data-action='inc'>+</button>
@@ -109,14 +103,14 @@ const template2 = data => `
                 <button data-action3='dec'>-</button>                
                 Bazz: ${data.customers.Larry.Bazz}
                 <button data-action3='inc'>+</button>
-            <br /><br />
+            <br />
             </div>               
             </center>
             `;
 const template3 = data => `
             <center>
             <div id='person'>
-                <h3 id='personbox'>Curly</h2>
+                <h3 id='personbox'>Curly</h3>
                 <button data-action='dec'>-</button>                
                 Foo: ${data.customers.Curly.Foo}
                 <button data-action='inc'>+</button>
@@ -132,7 +126,7 @@ const template3 = data => `
                 <button data-action3='dec'>-</button>                
                 Bazz: ${data.customers.Curly.Bazz}
                 <button data-action3='inc'>+</button>
-                <br /><br />
+                <br />
             </div>
             </center>
             `;

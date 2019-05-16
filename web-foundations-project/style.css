@@ -5,6 +5,9 @@
       background-color: dodgerblue;
       border: solid 1px dodgerblue;
       color: white;
+      /* position: float; */
+      display: flex;
+      align-content: space-around;
   }
 
   body {
@@ -62,6 +65,13 @@
       border-bottom: 0;
       border-top: 0;
   }
+
+  /* div #center {
+      border: solid 1px dodgerblue;
+      display: flex;
+      align-content: space-around;
+
+  } */
 
   h3 #personbox {
       width: 40%;
