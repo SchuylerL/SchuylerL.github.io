@@ -10,46 +10,27 @@
     <style>
       body {
         background-color: black;
-        /* margin: 0; */
-        /* width: 100vw; */
+        margin: 0;
+        width: 100vw;
       }
       div {
-        /* background-color: black; */
-        /* align-items: center; */
         display: flex;
         justify-content: space-between;
-        /* justify-content: center; */
         padding: 20% 10% 0 10%;
       }
       img {
-        max-width: 125px;
-        max-height: 125px;
+        max-width: 130px;
+        max-height: 130px;
         border-radius: 20px;
-        /* padding: 10%; */
       }
-      /* a {
-        text-align: center;
-      } */
       a:hover,
       img:hover {
         border-radius: 20px;
         background-color: dodgerblue;
       }
-      div {
-        color: white;
-      }
     </style>
   </head>
   <body>
-    <!-- <div id="center"></div>
-    <script>
-      const arr = [
-        "https://skythrilla.github.io/",
-        "https://watch.spectrum.net/guide"
-      ];
-      const div = document.querySelector("#center");
-      div.innerHTML = `<a href=${arr[0]}>yooo</a>`;
-    </script> -->
     <div>
       <a href="https://skythrilla.github.io/">
         <img
@@ -71,11 +52,28 @@
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAzr4kAZmJJTheDWJ9IRfK53U4ICE4IfPiobT8rI-ctUwUB9Lw"
         />
       </a>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+      >
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD////q6uqZmZlvb2/6+vrl5eX39/dERESDg4OdnZ1iYmLy8vJ7e3vu7u7b29vS0tK/v7/Kysqrq6ulpaWQkJBXV1csLCx0dHS3t7ff39/GxsZqamo0NDSJiYnW1tYVFRVMTEwmJiY7OzsLCwsaGho/Pz8YGBhJSUnWz60mAAAE1ElEQVR4nO3d23aqMBAG4KJVSxERFZUWqdrD3u//hFu3ra1WMIeZTOL6v8velH+JkEwm8e4OAAAAAAAAAAAAAAAAAAAAAAAAACAY24eqmJV5npfTer6Vvhpi73GZjaITT9NK+qrIJOVZuKNxvZK+OHvzctgQ76A/+yt9iVYeO63xDkZlqPfr/Fkh3tf9Gv+8X1+TZVzH1YPYpSupMvV8h/u1LJZVlT6W2eDrT4PJUjpGo+RJM1+TUSwd5aKN7ufXpv8qHeeXbU6Yb+9eOtGZukcc0LOIK8ob9OhDOta3mCPf7rsoneuI+ht4VEsnO3htGn/aG0ln+y9hy7eTSKe7Y/sKfppKx9sNslkDRpl0Pu6AUXTzASPhskeXPaDw+4L3IXPwIhlw6SBgFG3kAt47CRg9iQWcuwkYRY9CATeuAkZRKhLwwV3AKJoJBFzQT3fbZM4niu/t5V4G5frGA+5MFw4TqlS0GeTOSsVUNVF9L24qxSw1J1W9Kf8HOZYMuJfFa9aAbEUnDb18zhewlE73adRlerROpZP9MOGoUvFP6bV0yAflDqb0up5JP8haOs5Ffbqph6MZr77s7cYD7t4eJIuprLV7W8O1fUCnM159+a0HjCLbJqvV4Pr/kGVZ6HjzPmA0tgr4zrcCSsZqPfytL335Cjo2CeWm9BqG5m/9ID7ByGYVLpl1G/g10eDoEXuRDnWCYYnKr4AMHWIT6UhnyNeKfShInaCe7vtSkPpG3Hgzk87zW0ka0MN6DW1CL+s1lAld9JjoI/weelqv6ZIF9LVeQ7b/xlmPiS6qvWLe1muomolX0kEa2RfbDgH9rdfQDLxFWjAUkQS8y0adJtKFAJq3YVslRHrllH3XrXRBg+g500x8JM7dDC4+EufelOGmGboNc0D5kXjBG1B+JD7kDfhXOh/hrOIiD0bivFtpX0UHqr3xJC/eWQOuRQOWRE0mLURXTjuM7YlfmNbdBlnZjaskqdJi+txv2hPgZOclR8DB9LxPbRPnvydtmZOOb4Zm6H5DG/eiOFnoGrg5M4OhGbptbLKNx5837LDL/4ThCTi8ti/mbZ4WRerqaKJVen9BYvFwlduEp+PDPKBVt4g75rWMnsstPxbMN7R5dU5Ls8o44ET60hWZNy8EckDd1jjgs/SlKzKvuPlwgIkK43FqIG8Ki5VFqe3ousxbbPw7mO0y44Ch3KSpccJQXobmrYqBfA0t1r9lDoXQZtHpFsiDxmJmKH3paixWL3rS167GomM4jMm9TWUxkJfF2vyoDNrWV0bGnyLz+iYh04iBvA73DIvgoUwO98weqILnsekz2oQRSB3xk8HYLZAX/pH+HIq5k4JeolsV9ue4Z1UrzTG46NmWhvQW3tjbCjlo9WIGM2g7oTOXkjgTkcBavWpDt9fFMeU7NaBh6Zm5YmN/qL+ms6dWBHfQ2sSnUvkYPf9hoGsUPsZAFkcbba7Oi8P/qbmiPeBgLX2B9hatP+EV3NTiok3L+S+hLK1ds2wsNoY3eWpSNzRMB1LxVlJffDuGOD1sVl+YHNud0eWf9NfrMZRmIXWbs3dHkFP8Kxbdn1/IMKf4VyXfpWMPfs+JSTo5lB0DLWIo+XO/30hxywn3NkW4RQwAAAAAAAAAAAAAAAAAAAAAuFX/AEEyUfeLZSXjAAAAAElFTkSuQmCC"
+        />
+      </a>
       <a href="https://watch.spectrum.net/live">
         <img
           src="https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/3c/1d/09/3c1d0999-9e73-1e91-3152-065a5758039d/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg"
         />
       </a>
+
+      <!-- <div id="center"></div>
+    <script>
+      const arr = [
+        "https://skythrilla.github.io/",
+        "https://watch.spectrum.net/guide"
+      ];
+      const div = document.querySelector("#center");
+      div.innerHTML = `<a href=${arr[0]}>yooo</a>`;
+    </script> -->
     </div>
   </body>
 </html>
