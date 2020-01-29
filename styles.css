@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 10px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item {
+  background: lightblue;
+  height: 150px;
+  width: 800px;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.item .item--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  height: 100%;
+  width: 250px;
+  background: lightgreen;
+}
+.item .item--img img {
+  max-height: 200px;
+  max-width: 200px;
+}
+.item .item--title {
+  padding: 10px;
+}
+.item .item--title h3 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
