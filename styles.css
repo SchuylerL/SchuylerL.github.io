@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #52796f;
 }
 
 .container {
@@ -37,5 +38,7 @@ body {
 .item .item--title h3 {
   margin: 0;
 }
-
+.item .item--description {
+  width: 500px;
+}
 /*# sourceMappingURL=styles.css.map */
