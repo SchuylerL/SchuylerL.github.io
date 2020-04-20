@@ -50,3 +50,9 @@ body {
   /* font-size: 15px; */
 }
 /*# sourceMappingURL=styles.css.map */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+}
