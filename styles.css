@@ -23,9 +23,13 @@ body {
   width: 250px;
   background: lightgreen;
 }
+.item .item--img a {
+  height: 100%;
+  width: 250px;
+}
 .item .item--img img {
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 100%;
+  max-width: 100%;
 }
 .item .item--title {
   padding: 10px;
@@ -41,10 +45,12 @@ body {
 }
 /*# sourceMappingURL=styles.css.map */
 
-/* @media (max-width: 480px) 
-  .container 
-    width: 100vw;
-  
+@media (max-width: 480px) {
+  .item .item--img a {
+    width: 100px;
+  }
+}
+/*  
 //border box
 //take l r padding off add to top
 //auto margin L r
