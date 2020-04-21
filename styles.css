@@ -9,6 +9,9 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+h1 {
+  color: #4e4900;
+}
 .item {
   background: #c8e0d1;
   display: flex;
@@ -35,8 +38,8 @@ body {
 }
 .item .item--title {
   padding-left: 10px;
+  flex: 1;
 }
-
 .item .item--title h3 {
   margin: 0;
 }
@@ -47,7 +50,7 @@ body {
   color: #4e4900;
   transition: 0.1s linear color;
 }
-.item .item--title a:hover {
+.item .item--title h3:hover {
   color: rgba(0, 0, 0, 0.75);
 }
 .item .item--description {
