@@ -63,14 +63,8 @@ h1 {
   justify-content: center;
 }
 /*# sourceMappingURL=styles.css.map */
-
 @media (max-width: 480px) {
   .item .item--img a {
     width: 100px;
   }
 }
-/*  
-//border box
-//take l r padding off add to top
-//auto margin L r
-// */
