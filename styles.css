@@ -1,17 +1,19 @@
 body {
   margin: 0;
-  /* background-color: #e8e8e8; */
+  background-color: #25283d;
   font-family: 'Helvetica-light';
 }
 .container {
   padding: 10px;
   box-sizing: border-box;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
-h1,
+h1 {
+  color: #2176ff;
+}
 h3 {
-  color: #4e4900;
+  color: #0b6e4f;
   padding-bottom: 5px;
 }
 .item {
@@ -19,7 +21,7 @@ h3 {
   display: flex;
   margin-bottom: 20px;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 20px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .item .item--img {
@@ -37,30 +39,31 @@ h3 {
 .item .item--img img {
   max-height: 100%;
   max-width: 100%;
+  border-radius: 20px;
 }
 .item .item--title {
   padding-left: 10px;
   flex: 1;
 }
-.item .item--title h3 {
+.item .item--title h3,
+.item .item--title h4 {
   margin: 0;
 }
 .item .item--title a {
   text-decoration: none;
-  color: #4e4900;
+  color: #0b6e4f;
   transition: 0.1s linear color;
 }
 .item .item--title h3:hover,
-a:hover,
+.item .item--title a:hover,
 img:hover {
-  color: rgba(0, 0, 0, 0.75);
+  color: #50723c;
 }
 .item .item--description {
   margin-top: 5px;
-  color: rgba(0, 0, 0, 0.75);
+  color: black;
 }
 .item .item--descriptionDemo {
-  /* margin-top: 5px; */
   display: flex;
   flex-direction: column;
   align-items: center;
