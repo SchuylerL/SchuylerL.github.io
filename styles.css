@@ -10,19 +10,19 @@ body {
   margin: 0 auto;
 }
 h1 {
-  color: #2176ff;
+  color: white;
 }
 h3 {
   color: #0b6e4f;
   padding-bottom: 5px;
 }
 .header {
-  background: #c8e0d1;
+  /* background: #c8e0d1; */
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  /* border-radius: 20px; */
+  /* box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2); */
 }
 .item {
   background: #c8e0d1;
