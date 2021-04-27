@@ -10,29 +10,38 @@
       body {
         background-color: black;
       }
-      div {
+      .container {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-content: center;
-        height: 80vh;
+        height: 90vh;
         flex-wrap: wrap;
-        flex-direction: column;
-        /* margin-top: 15vh; */
-        /* margin: 10vh 0; */
+        /* flex-direction: column; */
       }
+      /* div { */
+      /* margin: 15px 0; */
+      /*  height: 100%;
+        width: 100%;*/
+      /* }  */
       img {
-        width: 60px;
+        width: 70px;
         border-radius: 20px;
+        margin: 15px 5px;
+        /* position: absolute; */
+      }
+      img:hover {
+        margin-bottom: 10px;
+        transition: 0.5s ease margin-bottom;
+        filter: drop-shadow(0 5px 3px lightblue);
       }
       a {
-        width: 60px;
-        height: 60px;
+        /* width: 80px; */
+        height: 200px;
         border-radius: 20px;
-        padding: 5px;
+        /* margin: 20px 0; */
+        text-decoration: none;
       }
       a:hover {
-        /* margin-right: 5px; */
-        /* transition: 0.2s ease margin-right; */
         background-color: blue;
       }
       /* @media (max-width: 1000px) {
@@ -47,7 +56,7 @@
     </style>
   </head>
   <body>
-    <div>
+    <div class="container">
       <div>
         <a
           href="https://www.twitch.tv/directory/following/live/"
@@ -92,8 +101,8 @@
             src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-logo.png"
           />
         </a>
-      </div>
-      <div>
+        <!--  </div>
+      <div> -->
         <a href="https://calendar.google.com/" rel="noopener noreferrer">
           <img
             src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_27_2x.png"
