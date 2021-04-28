@@ -5,59 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>-Tab-</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-    <style>
-      body {
-        background-color: black;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        height: 90vh;
-        flex-wrap: wrap;
-        /* flex-direction: column; */
-      }
-      /* div { */
-      /* margin: 15px 0; */
-      /*  height: 100%;
-        width: 100%;*/
-      /* }  */
-      img {
-        width: 70px;
-        border-radius: 20px;
-        margin: 15px 5px;
-        /* position: absolute; */
-      }
-      img:hover {
-        margin-bottom: 10px;
-        transition: 0.4s ease margin-bottom;
-        filter: drop-shadow(0 5px 3px lightblue);
-      }
-      a {
-        /* width: 80px; */
-        height: 200px;
-        border-radius: 20px;
-        /* margin: 20px 0; */
-        text-decoration: none;
-      }
-      a:hover {
-        background-color: blue;
-      }
-      /* @media (max-width: 1000px) {
-              body {
-                flex-direction: column;
-              }
-              a:hover {
-                margin-bottom: 0;
-                margin-left: 15px;
-              }
-            } */
-    </style>
+    <link rel="stylesheet" type="text/css" media="screen" href="blank.css" />
   </head>
   <body>
     <div class="container">
-      <div>
+      <div class="content">
         <a
           href="https://www.twitch.tv/directory/following/live/"
           rel="noopener noreferrer"
@@ -101,8 +53,6 @@
             src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-logo.png"
           />
         </a>
-        <!--  </div>
-      <div> -->
         <a href="https://calendar.google.com/" rel="noopener noreferrer">
           <img
             src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_27_2x.png"
@@ -139,7 +89,23 @@
         <a href="https://www.google.com" rel="noopener noreferrer">
           <img src="https://img-authors.flaticon.com/google.jpg" />
         </a>
+        <form>
+          <input
+            type="search"
+            id="myText"
+            maxlength="100"
+            placeholder="Add a Link: https://"
+          />
+          <button class="addBtn" type="submit">Add +</button>
+        </form>
+        <form>
+          <button class="rmvBtn" type="submit">Remove last link</button>
+        </form>
+        <br />
+        <form><button class="clearBtn" type="submit">Clear All</button></form>
+        <br />
       </div>
     </div>
   </body>
+  <script src="blank.js"></script>
 </html>
