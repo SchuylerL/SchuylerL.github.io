@@ -7,16 +7,16 @@ body {
   align-content: center;
   /* height: 90vh; */
   height: 100%;
-  margin-top: 300px;
-  margin-bottom: 50px;
+  margin-top: 25vh;
+  margin-bottom: 5vh;
   flex-wrap: wrap;
+  text-align: center;
 }
-/* .content {
-  display: flex;
-  flex-direction: column;
-} */
+.content {
+  width: 80vw;
+}
 img {
-  width: 70px;
+  width: 65px;
   border-radius: 20px;
   margin: 15px 5px;
 }
@@ -26,21 +26,26 @@ img:hover {
   filter: drop-shadow(0 5px 3px lightblue);
 }
 .newLink {
-  width: 30px;
-  border-radius: 20px;
-  margin: 5px 0;
-  color: white;
+  width: 25px;
+  background-color: white;
+  /* border-radius: 20px; */
+  /* margin: 5px 0; */
 }
 .newLink:hover {
-  margin: 5px 0;
-  background-color: white;
+  /* margin: 5px 0; */
   /* margin-left: 10px; */
   /* transition: 0.4s ease margin-left; */
   filter: drop-shadow(0 5px 3px lightblue);
 }
-/* .aLink:hover {
-  background-color: white;
-} */
+#aLink {
+  color: white;
+  background-color: darkblue;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+#aLink:hover {
+  background-color: blue;
+}
 a {
   height: 200px;
   border-radius: 20px;
@@ -50,9 +55,11 @@ a:hover {
   background-color: blue;
 }
 input,
-button {
-  /* width: 300px; */
-  margin: 10px 0;
+button,
+form {
+  text-align: center;
+  margin: 5px 0;
+  border-radius: 20px;
 }
 @media (max-width: 1000px) {
   .container {

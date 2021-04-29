@@ -13,12 +13,12 @@ for (let i = 0; i < locStrgArr.length; i++) {
   let node = document.createElement('a');
   node.href = locStrgArr[i];
   node.rel = 'noopener noreferrer';
-  //   node.class = 'newLink';
+  node.id = 'aLink';
   // node.innerText = locStrgArr[i];
-  node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${locStrgArr[i]} `;
+  node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${locStrgArr[i]} `;
   content.appendChild(node);
-  let br = document.createElement('br');
-  content.appendChild(br);
+  // let br = document.createElement('br');
+  // content.appendChild(br);
 }
 
 addBtn.addEventListener('click', (event) => {
@@ -35,12 +35,12 @@ addBtn.addEventListener('click', (event) => {
     let node = document.createElement('a');
     node.href = word;
     node.rel = 'noopener noreferrer';
-    // node.class = 'aLink';
-    node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${word} `;
+    node.id = 'aLink';
+    node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${word} `;
     //   node.innerText = inpt.value;
     content.appendChild(node);
-    let br = document.createElement('br');
-    content.appendChild(br);
+    // let br = document.createElement('br');
+    // content.appendChild(br);
   }
 });
 
