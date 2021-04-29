@@ -38,6 +38,9 @@ img:hover {
   /* transition: 0.4s ease margin-left; */
   filter: drop-shadow(0 5px 3px lightblue);
 }
+/* .aLink:hover {
+  background-color: white;
+} */
 a {
   height: 200px;
   border-radius: 20px;
@@ -46,9 +49,10 @@ a {
 a:hover {
   background-color: blue;
 }
-input {
-  width: 300px;
-  margin: 20px 0;
+input,
+button {
+  /* width: 300px; */
+  margin: 10px 0;
 }
 @media (max-width: 1000px) {
   .container {

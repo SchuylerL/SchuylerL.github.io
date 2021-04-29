@@ -1,7 +1,6 @@
 const addBtn = document.querySelector('.addBtn');
 const rmvBtn = document.querySelector('.rmvBtn');
 const clearBtn = document.querySelector('.clearBtn');
-
 const inpt = document.querySelector('#myText');
 const content = document.querySelector('.content');
 
@@ -25,29 +24,37 @@ for (let i = 0; i < locStrgArr.length; i++) {
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
   let word = inpt.value;
-  word.slice(4) === 'http'
-    ? locStrgArr.push(word)
-    : locStrgArr.push('http://' + word);
-  myStorage.setItem('selectionsList', locStrgArr);
-  let node = document.createElement('a');
-  node.href = word;
-  node.rel = 'noopener noreferrer';
-  //   node.class = 'newLink';
-  node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${word} `;
-  //   node.innerText = inpt.value;
-  content.appendChild(node);
-  let br = document.createElement('br');
-  content.appendChild(br);
+  if (word !== '') {
+    if (!word.includes('https://')) word = 'https://' + word;
+    //   ? (word = 'https://' + word))
+    // word.slice(5) !== 'https'
+    //   ? (word = 'https://' + word)
+    //   : (word = 'https://' + word);
+    locStrgArr.push(word);
+    myStorage.setItem('selectionsList', locStrgArr);
+    let node = document.createElement('a');
+    node.href = word;
+    node.rel = 'noopener noreferrer';
+    // node.class = 'aLink';
+    node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${word} `;
+    //   node.innerText = inpt.value;
+    content.appendChild(node);
+    let br = document.createElement('br');
+    content.appendChild(br);
+  }
 });
+
 rmvBtn.addEventListener('click', (event) => {
-  //   event.preventDefault();
+  // event.preventDefault();
   locStrgArr.pop();
   myStorage.setItem('selectionsList', locStrgArr);
 });
+
 clearBtn.addEventListener('click', (event) => {
-  //   event.preventDefault();
+  // event.preventDefault();
   locStrgArr = [];
-  myStorage.removeItem('selectionsList');
+  myStorage.clear();
+  // myStorage.removeItem('selectionsList');
 });
 
 /* const addBtn = (event) => {
