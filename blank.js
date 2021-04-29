@@ -24,13 +24,16 @@ for (let i = 0; i < locStrgArr.length; i++) {
 
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  locStrgArr.push(inpt.value);
+  let word = inpt.value;
+  word.slice(4) === 'http'
+    ? locStrgArr.push(word)
+    : locStrgArr.push('http://' + word);
   myStorage.setItem('selectionsList', locStrgArr);
   let node = document.createElement('a');
-  node.href = inpt.value;
+  node.href = word;
   node.rel = 'noopener noreferrer';
   //   node.class = 'newLink';
-  node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${inpt.value} `;
+  node.innerHTML = `<img class = 'newLink' src="https://img-authors.flaticon.com/google.jpg" /> ${word} `;
   //   node.innerText = inpt.value;
   content.appendChild(node);
   let br = document.createElement('br');

@@ -50,12 +50,8 @@ input {
   width: 300px;
   margin: 20px 0;
 }
-/* @media (max-width: 1000px) {
-              body {
-                flex-direction: column;
-              }
-              a:hover {
-                margin-bottom: 0;
-                margin-left: 15px;
-              }
-            } */
+@media (max-width: 1000px) {
+  .container {
+    margin: 0;
+  }
+}
