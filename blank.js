@@ -16,9 +16,11 @@ for (let i = 0; i < locStrgArr.length; i++) {
   node.id = 'aLink';
   // node.innerText = locStrgArr[i];
   node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${locStrgArr[i]} `;
+  if (i % 3 === 0) {
+    let br = document.createElement('br');
+    content.appendChild(br);
+  }
   content.appendChild(node);
-  // let br = document.createElement('br');
-  // content.appendChild(br);
 }
 
 addBtn.addEventListener('click', (event) => {
@@ -38,6 +40,10 @@ addBtn.addEventListener('click', (event) => {
     node.id = 'aLink';
     node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${word} `;
     //   node.innerText = inpt.value;
+    // if (i % 3 === 0) {
+    //   let br = document.createElement('br');
+    //   content.appendChild(br);
+    // }
     content.appendChild(node);
     // let br = document.createElement('br');
     // content.appendChild(br);
