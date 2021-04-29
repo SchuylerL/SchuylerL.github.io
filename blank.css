@@ -7,7 +7,7 @@ body {
   align-content: center;
   /* height: 90vh; */
   height: 100%;
-  margin-top: 25vh;
+  margin-top: 30vh;
   margin-bottom: 5vh;
   flex-wrap: wrap;
   text-align: center;
@@ -58,7 +58,7 @@ input,
 button,
 form {
   text-align: center;
-  margin: 5px 0;
+  margin: 10px 0;
   border-radius: 20px;
 }
 @media (max-width: 1000px) {
