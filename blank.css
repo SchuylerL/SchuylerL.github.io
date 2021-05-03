@@ -15,6 +15,9 @@ body {
 .content {
   width: 80vw;
 }
+/* .mySites{} */
+/* .myForm{} */
+/* .myAdded {} */
 img {
   width: 65px;
   border-radius: 20px;
@@ -26,32 +29,31 @@ img:hover {
   filter: drop-shadow(0 5px 3px lightblue);
 }
 .newLink {
+  margin: 0;
   width: 25px;
   background-color: white;
   /* border-radius: 20px; */
-  /* margin: 5px 0; */
 }
 .newLink:hover {
-  /* margin: 5px 0; */
+  margin: 0;
   /* margin-left: 10px; */
   /* transition: 0.4s ease margin-left; */
   filter: drop-shadow(0 5px 3px lightblue);
 }
 #aLink {
+  padding: 5px;
+  display: inline-block;
   color: white;
   background-color: darkblue;
   border-radius: 20px;
-  margin-right: 20px;
-}
-#aLink:hover {
-  background-color: blue;
+  margin: 10px;
 }
 a {
-  height: 200px;
   border-radius: 20px;
   text-decoration: none;
 }
-a:hover {
+a:hover,
+#aLink:hover {
   background-color: blue;
 }
 input,
@@ -59,7 +61,7 @@ button,
 form {
   text-align: center;
   margin: 10px 0;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 @media (max-width: 1000px) {
   .container {
