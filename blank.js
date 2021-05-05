@@ -1,11 +1,13 @@
 const addBtn = document.querySelector('.addBtn');
 const rmvBtn = document.querySelector('.rmvBtn');
+const rmvFirstBtn = document.querySelector('.rmvFirstBtn');
 const clearBtn = document.querySelector('.clearBtn');
 const inpt = document.querySelector('#myText');
 const content = document.querySelector('.content');
 const mySites = document.querySelector('.mySites');
 const myForm = document.querySelector('.myForm');
 const myAdded = document.querySelector('.myAdded');
+// const aBtn = document.querySelector('#aBtn');
 
 const mySitesObj = {
   'https://www.twitch.tv/directory/following/live/':
@@ -57,9 +59,16 @@ for (let i = 0; i < locStrgArr.length; i++) {
   node.href = locStrgArr[i];
   node.rel = 'noopener noreferrer';
   node.id = 'aLink';
+  node.key = i;
   // node.innerText = locStrgArr[i];
-  node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${locStrgArr[i]}`;
+  node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${
+    i + 1
+  }: ${locStrgArr[i]}`;
   myAdded.appendChild(node);
+  // let btn = document.createElement('button');
+  // btn.id = 'aBtn';
+  // btn.innerText = 'x';
+  // myAdded.appendChild(btn);
 }
 
 addBtn.addEventListener('click', (event) => {
@@ -73,18 +82,36 @@ addBtn.addEventListener('click', (event) => {
     node.href = word;
     node.rel = 'noopener noreferrer';
     node.id = 'aLink';
-    node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${word}`;
+    node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${locStrgArr.length}: ${word}`;
     //   node.innerText = inpt.value;
     myAdded.appendChild(node);
   }
 });
-
-rmvBtn.addEventListener('click', (event) => {
+/* rmvBtn.addEventListener('click', (event) => {
   // event.preventDefault();
   locStrgArr.pop();
-  myStorage.setItem('selectionsList', locStrgArr);
+  // console.log(locStrgArr.length);
+  locStrgArr.length === 0
+    ? myStorage.clear()
+    : myStorage.setItem('selectionsList', locStrgArr);
+}); */
+rmvFirstBtn.addEventListener('click', (event) => {
+  // event.preventDefault();
+  // console.log(typeof inpt.value);
+  // if (typeof inpt.value === Number)
+  locStrgArr.splice(Number(inpt.value) - 1, 1);
+  // locStrgArr.shift();
+  // console.log(locStrgArr.length);
+  locStrgArr.length === 0
+    ? myStorage.clear()
+    : myStorage.setItem('selectionsList', locStrgArr);
 });
-
+/* aBtn.addEventListener('click', (event) => {
+  // event.preventDefault();
+  console.log('fire');
+  locStrgArr.splice(3, 1);
+  myStorage.setItem('selectionsList', locStrgArr);
+}); */
 clearBtn.addEventListener('click', (event) => {
   // event.preventDefault();
   locStrgArr = [];

@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  /* height: 90vh; */
+  /* height: 95vh; */
   height: 100%;
   margin-top: 30vh;
   margin-bottom: 5vh;
@@ -59,7 +59,7 @@ a:hover,
 input,
 button,
 form {
-  text-align: center;
+  /* text-align: center; */
   margin: 10px 0;
   /* border-radius: 20px; */
 }
