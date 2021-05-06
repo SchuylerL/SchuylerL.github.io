@@ -1,11 +1,11 @@
 const addBtn = document.querySelector('.addBtn');
-const rmvBtn = document.querySelector('.rmvBtn');
+// const rmvBtn = document.querySelector('.rmvBtn');
 const rmvFirstBtn = document.querySelector('.rmvFirstBtn');
 const clearBtn = document.querySelector('.clearBtn');
 const inpt = document.querySelector('#myText');
-const content = document.querySelector('.content');
+// const content = document.querySelector('.content');
 const mySites = document.querySelector('.mySites');
-const myForm = document.querySelector('.myForm');
+// const myForm = document.querySelector('.myForm');
 const myAdded = document.querySelector('.myAdded');
 // const aBtn = document.querySelector('#aBtn');
 
@@ -59,7 +59,7 @@ for (let i = 0; i < locStrgArr.length; i++) {
   node.href = locStrgArr[i];
   node.rel = 'noopener noreferrer';
   node.id = 'aLink';
-  node.key = i;
+  // node.key = i;
   // node.innerText = locStrgArr[i];
   node.innerHTML = `<img class = 'newLink' src="https://static.thenounproject.com/png/49479-200.png" /> ${
     i + 1
@@ -95,7 +95,7 @@ addBtn.addEventListener('click', (event) => {
     ? myStorage.clear()
     : myStorage.setItem('selectionsList', locStrgArr);
 }); */
-rmvFirstBtn.addEventListener('click', (event) => {
+rmvFirstBtn.addEventListener('click', () => {
   // event.preventDefault();
   // console.log(typeof inpt.value);
   // if (typeof inpt.value === Number)
@@ -112,7 +112,7 @@ rmvFirstBtn.addEventListener('click', (event) => {
   locStrgArr.splice(3, 1);
   myStorage.setItem('selectionsList', locStrgArr);
 }); */
-clearBtn.addEventListener('click', (event) => {
+clearBtn.addEventListener('click', () => {
   // event.preventDefault();
   locStrgArr = [];
   myStorage.clear();

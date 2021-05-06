@@ -2,18 +2,19 @@ body {
   background-color: black;
 }
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-content: center;
   /* height: 95vh; */
   height: 100%;
-  margin-top: 30vh;
-  margin-bottom: 5vh;
+  /* margin-top: 30vh;
+  margin-bottom: 5vh; */
   flex-wrap: wrap;
   text-align: center;
 }
 .content {
-  width: 80vw;
+  margin: 30vh auto 0 auto;
+  width: 85vw;
 }
 /* .mySites{} */
 /* .myForm{} */
@@ -64,7 +65,7 @@ form {
   /* border-radius: 20px; */
 }
 @media (max-width: 1000px) {
-  .container {
+  .content {
     margin: 0;
   }
 }
