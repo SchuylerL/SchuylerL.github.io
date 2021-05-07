@@ -6,11 +6,11 @@ body {
 .container {
   padding: 10px;
   box-sizing: border-box;
-  max-width: 800px;
+  max-width: 725px;
   margin: 0 auto;
 }
 h1 {
-  color: skyblue;
+  color: #c8e0d1;
 }
 h3 {
   color: #0b6e4f;
