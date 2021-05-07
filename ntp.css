@@ -1,0 +1,90 @@
+body {
+  background-color: black;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* height: 100%; */
+  width: 75vw;
+  margin: 30vh auto 0 auto;
+  /* padding: 30vh auto 0 auto; */
+  /* flex-wrap: wrap; */
+  text-align: center;
+}
+/* .myTopSites,
+.myAdded {
+  width: 50vw;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+} */
+.sitesContainer {
+  /* flex-direction: column; */
+  text-align: center;
+  justify-content: center;
+  /* overflow-y: scroll; */
+  /* height: 30vh; */
+}
+img {
+  width: 65px;
+  border-radius: 20px;
+  margin: 15px 5px;
+}
+img:hover {
+  margin-bottom: 10px;
+  transition: 0.4s ease margin-bottom;
+  filter: drop-shadow(0 5px 3px lightblue);
+}
+a {
+  border-radius: 20px;
+  text-decoration: none;
+}
+#theDiv {
+  display: inline-block;
+}
+#aLink {
+  padding: 5px;
+  display: inline-block;
+  color: white;
+  background-color: darkblue;
+  margin: 5px;
+}
+a:hover,
+#aLink:hover {
+  background-color: blue;
+}
+#aLink:active {
+  color: black;
+  background-color: lightblue;
+}
+.newLink {
+  margin: 0;
+  width: 25px;
+  background-color: white;
+}
+.newLink:hover {
+  margin: 0;
+}
+hr {
+  margin: 10px auto;
+  width: 25vw;
+  justify-content: center;
+}
+input,
+button,
+form {
+  margin: 5px 0 10px 0;
+}
+@media (max-width: 1000px) {
+  .container {
+    /* flex-direction: row; */
+    margin-top: 0;
+  }
+  /* .sitesContainer {*/
+  /* height: 30vh; */
+  /* flex-direction: column; */
+  /* } */
+}
