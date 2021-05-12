@@ -30,7 +30,7 @@ body {
   /* height: 30vh; */
 }
 img {
-  width: 70px;
+  width: 60px;
   border-radius: 20px;
   margin: 0 3px 15px 3px;
 }
@@ -40,6 +40,8 @@ img:hover {
   filter: drop-shadow(0 5px 3px lightblue);
 }
 a {
+  color: white;
+
   border-radius: 20px;
   text-decoration: none;
 }
@@ -53,8 +55,12 @@ a {
 #theDiv {
   display: inline-block;
 }
+button {
+  margin-right: 10px;
+}
 /* #theDiv:hover, */
-#aLink:hover {
+#aLink:hover,
+button:hover {
   filter: drop-shadow(0 5px 3px lightblue);
   /* background-color: blue; */
 }
@@ -63,7 +69,6 @@ a:hover {
 }
 #aLink:active,
 a:active {
-  /* color: black; */
   background-color: blue;
 }
 .newLink {
@@ -79,12 +84,10 @@ hr {
   width: 25vw;
   justify-content: center;
 }
-button {
-  margin-right: 5px;
-}
+
 input,
 form {
-  margin: 10px 0;
+  margin: 10px 10px 10px 0;
 }
 @media (max-width: 1000px) {
   .container {
