@@ -3,7 +3,6 @@ const clearBtn = document.querySelector('.clearBtn');
 const inpt = document.querySelector('#myText');
 const mySites = document.querySelector('.mySites');
 const myAdded = document.querySelector('.myAdded');
-// const myTopSites = document.querySelector('.myTopSites');
 
 const mySitesObj = [
   // {
@@ -50,34 +49,19 @@ if (select !== null) locStrgArr = select.split(',');
 
 locStrgArr.sort();
 
-/* chrome.storage.sync.set({ key: locStrgArr }, function () {
-  console.log('Value is set to ' + locStrgArr);
-});
-
-chrome.storage.sync.get(['key'], function (result) {
-  console.log('Value currently is ' + result.key);
-});
-
-// topSites
-chrome.topSites.get((data) => {
-  for (let i = 0; i < data.length; i++) {
-    let node = document.createElement('a');
-    node.href = data[i].url;
-    node.rel = 'noopener noreferrer';
-    node.id = 'aLink';
-    node.title = data[i].url;
-    node.innerHTML = `<img class = 'newLink' src="img/link.png" /> ${
-      data[i].title.length > 35 ? data[i].title.substring(0, 35) : data[i].title
-    }`;
-    myTopSites.appendChild(node);
-  }
-}); */
 // myAdded
 for (let i = 0; i < locStrgArr.length; i++) {
   let node = document.createElement('div');
   node.id = 'theDiv';
-let word= locStrgArr[i].slice(-1);
-word!=="."?locStrgArr[i]+".com": locStrgArr[i];
+  let word =
+    locStrgArr[i].endsWith('.com') ||
+    locStrgArr[i].endsWith('.net') ||
+    locStrgArr[i].endsWith('.edu') ||
+    locStrgArr[i].endsWith('.org') ||
+    locStrgArr[i].endsWith('.gov') ||
+    locStrgArr[i].endsWith('.info')
+      ? locStrgArr[i]
+      : locStrgArr[i] + '.com';
   node.innerHTML = `<a href='${word}' rel = 'noopener noreferrer' id = 'aLink'> <img class='newLink' src='img/link.png' /> ${word}</a><button value=${word} id='itemBtn${i}'>x</button>`;
   myAdded.appendChild(node);
   document.querySelector('#itemBtn' + i).addEventListener('click', (e) => {
@@ -95,6 +79,15 @@ addBtn.addEventListener('click', (event) => {
   let word = inpt.value;
   if (word !== '') {
     if (!word.includes('https://')) word = 'https://' + word;
+    word =
+      word.endsWith('.com') ||
+      word.endsWith('.net') ||
+      word.endsWith('.edu') ||
+      word.endsWith('.org') ||
+      word.endsWith('.gov') ||
+      word.endsWith('.info')
+        ? word
+        : word + '.com';
     locStrgArr.push(word);
     myStorage.setItem('selectionsList', locStrgArr);
     inpt.value = '';
