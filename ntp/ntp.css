@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-content: center;
   /* height: 100%; */
-  width: 75vw;
+  width: 65vw;
   margin: 30vh auto 0 auto;
   /* padding: 30vh auto 0 auto; */
   /* flex-wrap: wrap; */
@@ -23,15 +23,16 @@ body {
 } */
 .sitesContainer {
   /* flex-direction: column; */
+  /* width: 70vw; */
   text-align: center;
   justify-content: center;
   /* overflow-y: scroll; */
   /* height: 30vh; */
 }
 img {
-  width: 65px;
+  width: 70px;
   border-radius: 20px;
-  margin: 15px 5px;
+  margin: 0 3px 15px 3px;
 }
 img:hover {
   margin-bottom: 10px;
@@ -42,9 +43,6 @@ a {
   border-radius: 20px;
   text-decoration: none;
 }
-#theDiv {
-  display: inline-block;
-}
 #aLink {
   padding: 5px;
   display: inline-block;
@@ -52,14 +50,21 @@ a {
   background-color: darkblue;
   margin: 5px;
 }
-a:hover,
-#aLink:hover {
-  background-color: blue;
+#theDiv {
+  display: inline-block;
 }
-a:active,
-#aLink:active {
-  color: black;
-  background-color: lightblue;
+/* #theDiv:hover, */
+#aLink:hover {
+  filter: drop-shadow(0 5px 3px lightblue);
+  /* background-color: blue; */
+}
+a:hover {
+  background-color: darkblue;
+}
+#aLink:active,
+a:active {
+  /* color: black; */
+  background-color: blue;
 }
 .newLink {
   margin: 0;
@@ -74,10 +79,12 @@ hr {
   width: 25vw;
   justify-content: center;
 }
+button {
+  margin-right: 5px;
+}
 input,
-button,
 form {
-  margin: 5px 0 10px 0;
+  margin: 10px 0;
 }
 @media (max-width: 1000px) {
   .container {
