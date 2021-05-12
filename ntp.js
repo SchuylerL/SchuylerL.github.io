@@ -76,7 +76,9 @@ chrome.topSites.get((data) => {
 for (let i = 0; i < locStrgArr.length; i++) {
   let node = document.createElement('div');
   node.id = 'theDiv';
-  node.innerHTML = `<a href='${locStrgArr[i]}' rel = 'noopener noreferrer' id = 'aLink'> <img class='newLink' src='img/link.png' /> ${locStrgArr[i]}</a><button value=${locStrgArr[i]} id='itemBtn${i}'>x</button>`;
+let word= locStrgArr[i].slice(-1);
+word!=="."?locStrgArr[i]+".com": locStrgArr[i];
+  node.innerHTML = `<a href='${word}' rel = 'noopener noreferrer' id = 'aLink'> <img class='newLink' src='img/link.png' /> ${word}</a><button value=${word} id='itemBtn${i}'>x</button>`;
   myAdded.appendChild(node);
   document.querySelector('#itemBtn' + i).addEventListener('click', (e) => {
     e.preventDefault();
