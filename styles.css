@@ -9,20 +9,24 @@ body {
   max-width: 725px;
   margin: 0 auto;
 }
-h1 {
-  color: #c8e0d1;
-}
 h3 {
   color: #0b6e4f;
   padding-bottom: 5px;
 }
+.header h1 {
+  color: #c8e0d1;
+}
 .header {
-  /* background: #c8e0d1; */
   display: flex;
   justify-content: center;
-  /* margin-bottom: 5px; */
-  /* border-radius: 20px; */
   /* box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+.header a {
+  margin: auto;
+}
+.header img {
+  border-radius: 20px;
+  width: 60px;
 }
 .item {
   background: #c8e0d1;
