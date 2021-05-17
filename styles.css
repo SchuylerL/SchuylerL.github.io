@@ -2,6 +2,13 @@ body {
   margin: 0;
   background-color: #25283d;
   font-family: 'Helvetica-light';
+
+  background-image: url('img/sky-828648_1920.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .container {
   padding: 10px;
@@ -32,7 +39,7 @@ h3 {
   background: #c8e0d1;
   display: flex;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -81,6 +88,21 @@ img:hover {
   align-items: center;
   padding: 10px;
 }
+
+/* .parallax { */
+/* The image used */
+/* background-image: url('img/omnieatspic.png'); */
+
+/* Full height */
+/* height: 100%;  */
+
+/* Create the parallax scrolling effect */
+/* background-attachment: fixed; */
+/* background-position: center; */
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
+/* } */
+
 /*# sourceMappingURL=styles.css.map */
 
 @media (max-width: 480px) {
