@@ -11,37 +11,72 @@ body {
   background-size: cover;
 }
 .container {
-  padding: 10px;
+  /* padding: 10px; */
   box-sizing: border-box;
   max-width: 725px;
   margin: 0 auto;
 }
-h3 {
-  color: #0b6e4f;
-  padding-bottom: 5px;
-}
 .header h1 {
-  color: #c8e0d1;
-}
-.header {
-  display: flex;
-  justify-content: center;
-  /* box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2); */
-}
-.header a {
+  color: #0b6e4f;
   margin: auto;
 }
 .header img {
   border-radius: 20px;
   width: 60px;
+  border: solid 1px black;
 }
-.item {
-  background: #c8e0d1;
+.header {
   display: flex;
-  margin-bottom: 20px;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #1f6487;
+  /* padding: 5px 0; */
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header a {
+  margin: auto 0;
+  float: left;
+  color: #1ccad8;
+  text-align: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header a.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+/* .header a:hover {
+  color: #50723c;
+} */
+.header a.active {
+  /* background-color: #50723c; */
+  color: white;
+}
+.header-right {
+  float: right;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+.item {
+  background: #1f6487;
+  display: flex;
+  margin: 10px 0;
   padding: 15px;
   border-radius: 20px;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .item .item--img {
   display: flex;
@@ -56,8 +91,8 @@ h3 {
   text-align: center;
 }
 .item .item--img img {
-  max-height: 100%;
-  max-width: 100%;
+  /* max-height: 100%; */
+  max-width: 90%;
   border-radius: 20px;
 }
 .item .item--title {
@@ -67,6 +102,8 @@ h3 {
 .item .item--title h3,
 .item .item--title h4 {
   margin: 0;
+  color: #1ccad8;
+  padding-bottom: 5px;
 }
 .item .item--title a {
   text-decoration: none;
@@ -74,13 +111,12 @@ h3 {
   transition: 0.1s linear color;
 }
 .item .item--title h3:hover,
-.item .item--title a:hover,
-img:hover {
-  color: #50723c;
+.item .item--title a:hover {
+  color: #fff;
 }
 .item .item--description {
   margin-top: 5px;
-  color: black;
+  color: white;
 }
 .item .item--descriptionDemo {
   display: flex;
@@ -88,22 +124,6 @@ img:hover {
   align-items: center;
   padding: 10px;
 }
-
-/* .parallax { */
-/* The image used */
-/* background-image: url('img/omnieatspic.png'); */
-
-/* Full height */
-/* height: 100%;  */
-
-/* Create the parallax scrolling effect */
-/* background-attachment: fixed; */
-/* background-position: center; */
-/* background-repeat: no-repeat; */
-/* background-size: cover; */
-/* } */
-
-/*# sourceMappingURL=styles.css.map */
 
 @media (max-width: 480px) {
   .item .item--img a {
