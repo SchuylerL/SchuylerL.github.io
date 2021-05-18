@@ -14,19 +14,10 @@ body {
   /* flex-wrap: wrap; */
   text-align: center;
 }
-/* .myTopSites,
-.myAdded {
-  width: 50vw;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-} */
 .sitesContainer {
-  /* flex-direction: column; */
   /* width: 70vw; */
   text-align: center;
   justify-content: center;
-  /* overflow-y: scroll; */
   /* height: 30vh; */
 }
 img {
@@ -41,12 +32,11 @@ img:hover {
 }
 a {
   color: white;
-
   border-radius: 20px;
   text-decoration: none;
 }
 #aLink {
-  padding: 5px;
+  padding: 5px 10px;
   display: inline-block;
   color: white;
   background-color: darkblue;
@@ -58,7 +48,9 @@ a {
 button {
   margin-right: 10px;
 }
-/* #theDiv:hover, */
+button.clearBtn {
+  margin: 0;
+}
 #aLink:hover,
 button:hover {
   filter: drop-shadow(0 5px 3px lightblue);
@@ -84,10 +76,9 @@ hr {
   width: 25vw;
   justify-content: center;
 }
-
 input,
 form {
-  margin: 10px 10px 10px 0;
+  margin: 10px 0 10px 0;
 }
 @media (max-width: 1000px) {
   .container {

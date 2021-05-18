@@ -2,15 +2,16 @@ const addBtn = document.querySelector('.addBtn');
 const clearBtn = document.querySelector('.clearBtn');
 const inpt = document.querySelector('#myText');
 const mySites = document.querySelector('.mySites');
-const myAdded = document.querySelector('.myAdded');
+const myTopSites = document.querySelector('.myTopSites');
+const sitesContainer = document.querySelector('.sitesContainer');
 
 const mySitesObj = [
   {
     url: 'https://www.twitch.tv/directory/following/live/',
     imgSrc: 'img/twitch.png',
   },
-  { url: 'https://music.amazon.com', imgSrc: 'img/music.png' },
   { url: 'https://watch.spectrum.net/guide', imgSrc: 'img/tv.jpeg' },
+  { url: 'https://music.amazon.com', imgSrc: 'img/music.png' },
   {
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
     imgSrc: 'img/mdn.jpeg',
@@ -47,20 +48,69 @@ const select = myStorage.getItem('selectionsList');
 let locStrgArr = [];
 if (select !== null) locStrgArr = select.split(',');
 
-locStrgArr.sort();
+// chrome.storage.sync.set({ key: locStrgArr }, function () {
+//   console.log('Value is set to ' + locStrgArr);
+// });
+// chrome.storage.sync.get(['key'], function (result) {
+//   console.log('Value currently is ' + result.key);
+// });
+
+// topSites
+/* chrome.topSites.get((data) => {
+  for (let i = 0; i < data.length; i++) {
+    let node = document.createElement('a');
+    node.href = data[i].url;
+    node.rel = 'noopener noreferrer';
+    node.id = 'aLink';
+    node.title = data[i].url;
+    node.innerHTML =
+      // `<img class = 'newLink' src="img/link.png" /> ${
+      data[i].title.length > 35
+        ? data[i].title.substring(0, 35)
+        : data[i].title;
+    // }`;
+    myTopSites.appendChild(node);
+  }
+}); */
 
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  // console.log(locStrgArr);
   let word = inpt.value;
-  if (word !== '') {
-    if (!word.includes('https://')) word = 'https://' + word;
+  // locStrgArr.forEach((url) => {
+  //   if (url === inpt.value) {
+  //     inpt.value = '*** Duplicate URL entered ***';
+  //     setTimeout(function () {
+  //       inpt.value = '';
+  //     }, 3000);
+  //   }
+  // });
+  if (inpt.value !== '' && inpt.value !== '*** Duplicate URL entered ***') {
+    inpt.value = '';
     locStrgArr.push(word);
     myStorage.setItem('selectionsList', locStrgArr);
-    inpt.value = '';
     let node = document.createElement('div');
     node.id = 'theDiv';
-    node.innerHTML = `<a href='${word}' rel = 'noopener noreferrer' id = 'aLink'> <img class='newLink' src='img/link.png' /> ${word}</a><button value=${word} id='itemBtn${locStrgArr.length}'>x</button>`;
+    // node.innerHTML = `<a href='${word}' rel = 'noopener noreferrer' id = 'aLink'> <img class='newLink' src='img/link.png' /> ${word}</a><button value=${word} id='itemBtn${locStrgArr.length}'>x</button>`;
     myAdded.appendChild(node);
+
+    const a = document.createElement('a');
+    if (!word.includes('http')) word = `https://${word}`;
+    a.href = word;
+    // const imgg = document.createElement('img');
+    // imgg.classList = 'newLink';
+    // imgg.src = 'img/link.png';
+    // a.appendChild(imgg);
+    a.rel = 'noopener noreferrer';
+    a.id = 'aLink';
+    a.innerHTML += ` ${word}`;
+    const btn = document.createElement('button');
+    btn.value = word;
+    btn.id = `itemBtn${locStrgArr.length}`;
+    btn.innerText = 'x';
+    node.appendChild(a);
+    node.appendChild(btn);
+
     document
       .querySelector('#itemBtn' + locStrgArr.length)
       .addEventListener('click', (e) => {
@@ -74,6 +124,7 @@ addBtn.addEventListener('click', (event) => {
       });
   }
 });
+
 clearBtn.addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelectorAll('#theDiv').forEach((elem) => {
@@ -95,7 +146,6 @@ class Link {
     if (!this.url.includes('http')) {
       this.url = `https://${this.url}`;
     }
-
     return this.url;
   }
 
@@ -104,10 +154,10 @@ class Link {
     const url = this.getUrl();
     a.href = url;
 
-    const imgg = document.createElement('img');
-    imgg.classList = 'newLink';
-    imgg.src = 'img/link.png';
-    a.appendChild(imgg);
+    // const imgg = document.createElement('img');
+    // imgg.classList = 'newLink';
+    // imgg.src = 'img/link.png';
+    // a.appendChild(imgg);
     a.rel = 'noopener noreferrer';
     a.id = 'aLink';
     a.innerHTML += ` ${url}`;
@@ -127,10 +177,11 @@ class Link {
 class LinkController {
   constructor(urls) {
     this.el = document.createElement('div');
-    // this.el.id = 'theDiv';
+    this.el.id = 'myAdded';
     this.urls = urls;
+    this.urls.sort();
     this.renderLinks();
-    myAdded.appendChild(this.el);
+    sitesContainer.appendChild(this.el);
   }
 
   renderLinks = () => {
@@ -144,9 +195,10 @@ class LinkController {
 
   removeLink = (index) => {
     this.urls = this.urls.filter((_, i) => i !== index); // remove index passed
-    locStrgArr.length === 0
+    this.urls.length === 0
       ? myStorage.clear()
       : myStorage.setItem('selectionsList', this.urls);
+    locStrgArr = this.urls;
     this.renderLinks();
   };
 }
