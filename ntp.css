@@ -1,6 +1,20 @@
 body {
   background-color: black;
+  background: url(https://lh4.googleusercontent.com/proxy/n0iQKlAJqoZJvPdXNxJTOMokgx33LN6KA8mo7sIWZDvezz2hBHkEQHX8DV4a2ucOojuoE0mTT8LmSNmMdIUMMPL273HBaiWYUt3kAA=w3840-h2160-p-k-no-nd-mv);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+}
+.mySites {
+  background: black;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border: white 3px solid;
 }
 .container {
   display: flex;
@@ -9,7 +23,7 @@ body {
   align-content: center;
   /* height: 100%; */
   width: 65vw;
-  margin: 30vh auto 0 auto;
+  margin: 25vh auto 0 auto;
   /* padding: 30vh auto 0 auto; */
   /* flex-wrap: wrap; */
   text-align: center;
@@ -23,12 +37,13 @@ body {
 img {
   width: 60px;
   border-radius: 20px;
-  margin: 0 3px 15px 3px;
+  margin: 0 3px 10px 3px;
+  /* border: black 1px solid; */
 }
 img:hover {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   transition: 0.4s ease margin-bottom;
-  filter: drop-shadow(0 5px 3px lightblue);
+  filter: drop-shadow(0 5px 5px lightblue);
 }
 a {
   color: white;
@@ -36,11 +51,12 @@ a {
   text-decoration: none;
 }
 #aLink {
-  padding: 5px 10px;
+  padding: 10px;
   display: inline-block;
   color: white;
-  background-color: darkblue;
+  background-color: blue;
   margin: 5px;
+  box-shadow: 5px 5px 5px black;
 }
 #theDiv {
   display: inline-block;
@@ -53,15 +69,16 @@ button.clearBtn {
 }
 #aLink:hover,
 button:hover {
-  filter: drop-shadow(0 5px 3px lightblue);
+  filter: drop-shadow(0 3px 3px lightblue);
   /* background-color: blue; */
 }
 a:hover {
-  background-color: darkblue;
+  background-color: blue;
+  box-shadow: 5px 5px 5px black;
 }
 #aLink:active,
 a:active {
-  background-color: blue;
+  background-color: darkblue;
 }
 .newLink {
   margin: 0;
@@ -78,15 +95,11 @@ hr {
 }
 input,
 form {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 @media (max-width: 1000px) {
   .container {
     /* flex-direction: row; */
     margin-top: 0;
   }
-  /* .sitesContainer {*/
-  /* height: 30vh; */
-  /* flex-direction: column; */
-  /* } */
 }
