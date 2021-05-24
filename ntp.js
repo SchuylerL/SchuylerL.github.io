@@ -213,13 +213,13 @@ class Link {
 //   myTopSites.style.display = 'none';
 // }
 
-let nodeBtn = document.createElement('button');
-nodeBtn.innerText = 'TopSites';
-nodeBtn.classList = 'topSitesBtn';
-nodeBtn.onclick = function btnToggle() {
-  myTopSites.classList.toggle('btnToggle');
-};
-document.querySelector('.myForm').appendChild(nodeBtn);
+// let nodeBtn = document.createElement('button');
+// nodeBtn.innerText = 'TopSites';
+// nodeBtn.classList = 'topSitesBtn';
+// nodeBtn.onclick = function btnToggle() {
+//   myTopSites.classList.toggle('btnToggle');
+// };
+// document.querySelector('.myForm').appendChild(nodeBtn);
 
 //2
 // let nodeBtn2 = document.createElement('button');
