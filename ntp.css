@@ -51,7 +51,8 @@ img:hover {
 }
 a {
   color: white;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-radius: 0.25rem;
   text-decoration: none;
 }
 #aLink {
@@ -59,15 +60,13 @@ a {
   display: inline-block;
   color: white;
   background-color: darkblue;
-  margin: 5px;
   box-shadow: 0 2px 2px black;
+  margin: 5px;
 }
 #theDiv {
   display: inline-block;
+  margin-right: 5px;
 }
-/* button {
-  margin: 0;
-} */
 button.clearBtn {
   display: none;
 }
