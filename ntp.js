@@ -8,7 +8,6 @@ const sitesContainer = document.querySelector('.sitesContainer');
 const bgArray = [
   'https://lh4.googleusercontent.com/proxy/n0iQKlAJqoZJvPdXNxJTOMokgx33LN6KA8mo7sIWZDvezz2hBHkEQHX8DV4a2ucOojuoE0mTT8LmSNmMdIUMMPL273HBaiWYUt3kAA=w3840-h2160-p-k-no-nd-mv',
   'https://lh4.googleusercontent.com/proxy/hxSc80h6Htq3U-4ze-TX8Esb54ecWL6g_BbINw2tSAM4ZM7iA4XOSHrPfgCjki87-ZusKhCnd-NDKHAXf4j-zi1IxUD-ddsEY6G81w=w3840-h2160-p-k-no-nd-mv',
-  'https://cdn.pixabay.com/photo/2017/02/08/17/24/fantasy-2049567_960_720.jpg',
   'https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg',
   'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg',
   'https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_960_720.jpg',
@@ -16,14 +15,18 @@ const bgArray = [
   'https://cdn.pixabay.com/photo/2016/09/29/13/08/planet-1702788_960_720.jpg',
   'https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826_960_720.jpg',
   'https://cdn.pixabay.com/photo/2017/05/09/03/46/alberta-2297204_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2014/01/18/10/14/vaulted-cellar-247391_960_720.jpg',
-  'https://cdn.pixabay.com/photo/2015/07/09/22/44/tree-838666_960_720.jpg',
   'https://cdn.pixabay.com/photo/2017/06/23/17/46/desert-2435404_960_720.jpg',
   'https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg',
   'https://cdn.pixabay.com/photo/2017/02/22/17/02/beach-2089936_960_720.jpg',
   'https://cdn.pixabay.com/photo/2014/11/21/03/24/mountains-540115_960_720.jpg',
   'https://cdn.pixabay.com/photo/2018/06/16/16/17/road-3478977_960_720.jpg',
+  'https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg',
+  'https://cdn.pixabay.com/photo/2017/09/12/11/56/universe-2742113_1280.jpg',
+  'https://cdn.pixabay.com/photo/2014/05/22/16/52/pyrenees-351266_1280.jpg',
+  'https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_1280.jpg',
+  'https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg',
 ];
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -33,15 +36,23 @@ document
   .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
 
 const mySitesObj = [
+  { url: 'https://music.amazon.com', imgSrc: 'img/music.png' },
   {
     url: 'https://www.twitch.tv/directory/following/live/',
     imgSrc: 'img/twitch.png',
   },
   { url: 'https://watch.spectrum.net/guide', imgSrc: 'img/tv.jpeg' },
-  { url: 'https://music.amazon.com', imgSrc: 'img/music.png' },
   {
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
     imgSrc: 'img/mdn.jpeg',
+  },
+  {
+    url: 'https://www.w3schools.com',
+    imgSrc: 'img/w3.png',
+  },
+  {
+    url: 'https://css-tricks.com/',
+    imgSrc: 'img/tricks.jpeg',
   },
   {
     url: 'https://github.com/skythrilla?tab=repositories',
@@ -83,21 +94,6 @@ if (select !== null) locStrgArr = select.split(',');
 // });
 
 // topSites
-// chrome.topSites.get((data) => {
-
-//   for (let i = 0; i < data.length; i++) {
-//     let node = document.createElement('a');
-//     node.href = data[i].url;
-//     node.rel = 'noopener noreferrer';
-//     node.id = 'aLink';
-//     node.title = data[i].url;
-//     node.innerHTML =
-//       data[i].title.length > 35
-//         ? data[i].title.substring(0, 35)
-//         : data[i].title;
-//     myTopSites.appendChild(node);
-//   }
-// });
 
 addBtn.addEventListener('click', (event) => {
   event.preventDefault();
@@ -208,27 +204,34 @@ class Link {
   }
 }
 
-// function isHidden() {
-//   console.log(myTopSites.classList);
-//   myTopSites.style.display = 'none';
-// }
+const nodeBtn = document.createElement('button');
+nodeBtn.innerText = 'Top Sites';
+nodeBtn.classList = 'topSitesBtn';
+nodeBtn.onclick = function btnToggle() {
+  myTopSites.classList.toggle('btnToggle');
+};
+document.querySelector('.myForm').appendChild(nodeBtn);
 
-// let nodeBtn = document.createElement('button');
-// nodeBtn.innerText = 'TopSites';
-// nodeBtn.classList = 'topSitesBtn';
-// nodeBtn.onclick = function btnToggle() {
-//   myTopSites.classList.toggle('btnToggle');
-// };
-// document.querySelector('.myForm').appendChild(nodeBtn);
+const reBtn = document.createElement('button');
+reBtn.classList = 'bgBtn';
+reBtn.onclick = function reBtn() {
+  document
+    .querySelector('body')
+    .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
+};
+const reImg = document.createElement('img');
+reImg.classList = 'newLink';
+reImg.src = 'img/reload.svg';
+reBtn.appendChild(reImg);
+document.querySelector('.myForm').appendChild(reBtn);
 
-//2
-// let nodeBtn2 = document.createElement('button');
-// nodeBtn2.innerText = 'Hide TopSites';
-// nodeBtn.classList = 'btnToggle';
-// nodeBtn2.onclick = function resetElement() {
-//   myTopSites.style.display = 'none';
-// };
-// document.querySelector('.myForm').appendChild(nodeBtn2);
+const bgBtn = document.createElement('button');
+bgBtn.innerText = 'No BG';
+// bgBtn.classList = 'bgBtn';
+bgBtn.onclick = function bgBtn() {
+  document.querySelector('body').setAttribute('background', '');
+};
+document.querySelector('.myForm').appendChild(bgBtn);
 
 // myTopSites.style.display === 'none'
 //   ? function resetElement() {
