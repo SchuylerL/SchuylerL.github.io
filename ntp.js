@@ -204,13 +204,13 @@ class Link {
   }
 }
 
-const nodeBtn = document.createElement('button');
-nodeBtn.innerText = 'Top Sites';
-nodeBtn.classList = 'topSitesBtn';
-nodeBtn.onclick = function btnToggle() {
-  myTopSites.classList.toggle('btnToggle');
-};
-document.querySelector('.myForm').appendChild(nodeBtn);
+// const nodeBtn = document.createElement('button');
+// nodeBtn.innerText = 'Top Sites';
+// nodeBtn.classList = 'topSitesBtn';
+// nodeBtn.onclick = function btnToggle() {
+//   myTopSites.classList.toggle('btnToggle');
+// };
+// document.querySelector('.myForm').appendChild(nodeBtn);
 
 const reBtn = document.createElement('button');
 reBtn.classList = 'bgBtn';
