@@ -13,6 +13,11 @@ body {
 .bgBtn {
   margin: 0 5px;
 }
+.blkBtn {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+}
 .mySites {
   padding: 5px 0;
   backdrop-filter: blur(25px);

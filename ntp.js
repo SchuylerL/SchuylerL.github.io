@@ -226,8 +226,8 @@ reBtn.appendChild(reImg);
 document.querySelector('.myForm').appendChild(reBtn);
 
 const bgBtn = document.createElement('button');
-bgBtn.innerText = 'No BG';
-// bgBtn.classList = 'bgBtn';
+// bgBtn.innerText = 'No BG';
+bgBtn.classList = 'blkBtn';
 bgBtn.onclick = function bgBtn() {
   document.querySelector('body').setAttribute('background', '');
 };
