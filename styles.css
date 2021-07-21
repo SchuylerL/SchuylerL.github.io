@@ -46,27 +46,12 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-/* .header a:hover {
-  color: #50723c;
-} */
 .header a.active {
-  /* background-color: #50723c; */
   color: white;
 }
 .header-right {
   float: right;
 }
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
-}
-
 .item {
   background: #1f6487;
   display: flex;
@@ -121,7 +106,16 @@ body {
   align-items: center;
   padding: 10px;
 }
-
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
 @media (max-width: 480px) {
   .item .item--img a {
     width: 100px;
