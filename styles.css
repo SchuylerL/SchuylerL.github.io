@@ -23,6 +23,11 @@ body {
   width: 60px;
   border: solid 1px black;
 }
+.header img:hover {
+  transform: translate(0, -3%);
+  transition: 0.3s ease transform;
+  filter: drop-shadow(0 3px 3px #1ccad8);
+}
 .header {
   display: flex;
   justify-content: center;
@@ -77,6 +82,11 @@ body {
   max-width: 90%;
   border-radius: 20px;
 }
+.item .item--img img:hover {
+  transform: translate(0, -3%);
+  transition: 0.3s ease transform;
+  filter: drop-shadow(0 3px 3px #1ccad8);
+}
 .item .item--title {
   padding-left: 10px;
   flex: 1;
@@ -100,12 +110,12 @@ body {
   margin-top: 5px;
   color: white;
 }
-.item .item--descriptionDemo {
+/* .item .item--descriptionDemo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
-}
+} */
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
