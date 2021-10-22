@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #25283d;
+  background-color: #000;
   font-family: 'Raleway', sans-serif;
   background-image: url('img/sky-828648_1920.jpg');
   height: 100%;
@@ -24,8 +24,6 @@ body {
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .header img:hover {
-  /* transform: translate(0, -3%);
-  transition: 0.3s ease transform; */
   filter: drop-shadow(0 3px 3px #1ccad8);
 }
 .header {
@@ -49,7 +47,6 @@ body {
 }
 .header a.logo {
   font-size: 30px;
-  font-weight: bold;
 }
 .header a.active {
   color: white;
@@ -65,21 +62,14 @@ body {
   border-radius: 20px;
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
   animation: move 2s ease;
-  /* animation-iteration-count: infinite; */
 }
 @keyframes move {
   0% {
-    transform: translateX(-150px);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(0);
   }
-  /* 50% {
-    transform: translateX(0);
-  } */
-  /* 100% {
-    transform: translateX(150px);
-  } */
 }
 .item .item--img {
   display: flex;
@@ -94,7 +84,6 @@ body {
   text-align: center;
 }
 .item .item--img img {
-  /* max-height: 100%; */
   max-width: 90%;
   border-radius: 20px;
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
