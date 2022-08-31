@@ -87,11 +87,13 @@ body {
   max-width: 90%;
   border-radius: 20px;
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s; /* Animation */
 }
 .item .item--img img:hover {
-  transform: translate(3%, 0);
-  transition: 0.3s ease transform;
+  /* transform: translate(3%, 0);
+  transition: 0.3s ease transform; */
   filter: drop-shadow(0 3px 3px #1ccad8);
+  transform: scale(1.1);
 }
 .item .item--title {
   padding-left: 10px;
