@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CT Buttons</title>
+    <style>
+      .button-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .copy-button {
+        display: block;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+      }
+
+      .copy-button:hover {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="copy-button" data-text="97802">97802</button>
+      <button class="copy-button" data-text="97803">97803</button>
+      <button class="copy-button" data-text="R7301">R7301</button>
+      <button class="copy-button" data-text="R7303">R7303</button>
+      <button class="copy-button" data-text="R7309">R7309</button>
+      <button class="copy-button" data-text="E1122">E1122</button>
+      <button class="copy-button" data-text="Z6831">Z6831</button>
+      <button class="copy-button" data-text="Z6834">Z6834</button>
+      <button class="copy-button" data-text="Z6832">Z6832</button>
+      <button class="copy-button" data-text="Z6836">Z6836</button>
+      <button class="copy-button" data-text="Z6841">Z6841</button>
+      <button class="copy-button" data-text="Z6842">Z6842</button>
+      <button class="copy-button" data-text="O24419">O24419</button>
+      <button class="copy-button" data-text="E669">E669</button>
+      <button class="copy-button" data-text="Z9884">Z9884</button>
+      <button class="copy-button" data-text="K219">K219</button>
+      <button class="copy-button" data-text="E559">E559</button>
+      <button class="copy-button" data-text="K739">K739</button>
+      <button class="copy-button" data-text="E1165">E1165</button>
+      <button class="copy-button" data-text="E119">E119</button>
+      <button class="copy-button" data-text="E785">E785</button>
+      <button class="copy-button" data-text="E669">E669</button>
+      <button class="copy-button" data-text="E6601">E6601</button>
+      <button class="copy-button" data-text="R7309">R7309</button>
+      <button class="copy-button" data-text=""></button>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var copyButtons = document.querySelectorAll('.copy-button');
+        copyButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            var textToCopy = this.getAttribute('data-text');
+            copyToClipboard(textToCopy);
+          });
+        });
+
+        function copyToClipboard(text) {
+          var textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          //   alert('Text copied to clipboard: ' + text);
+        }
+      });
+    </script>
+  </body>
+</html>
