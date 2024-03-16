@@ -221,7 +221,7 @@ reBtn.onclick = function reBtn() {
 };
 const reImg = document.createElement('img');
 reImg.classList = 'newLink';
-reImg.src = 'img/reload.svg';
+reImg.src = '../img/reload.svg';
 reBtn.appendChild(reImg);
 document.querySelector('.myForm').appendChild(reBtn);
 
