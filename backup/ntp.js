@@ -55,7 +55,7 @@ const mySitesObj = [
     imgSrc: '../img/tricks.jpeg',
   },
   {
-    url: 'https://github.com/skythrilla?tab=repositories',
+    url: 'https://github.com/schuylerl?tab=repositories',
     imgSrc: '../img/gh.png',
   },
   { url: 'http://localhost:3000', imgSrc: '../img/logo192.png' },
