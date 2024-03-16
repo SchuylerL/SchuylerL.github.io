@@ -6,7 +6,7 @@ const myTopSites = document.querySelector('.myTopSites');
 const sitesContainer = document.querySelector('.sitesContainer');
 
 const bgArray = [
-  'https://lh4.googleusercontent.com/proxy/n0iQKlAJqoZJvPdXNxJTOMokgx33LN6KA8mo7sIWZDvezz2hBHkEQHX8DV4a2ucOojuoE0mTT8LmSNmMdIUMMPL273HBaiWYUt3kAA=w3840-h2160-p-k-no-nd-mv',
+  /*'https://lh4.googleusercontent.com/proxy/n0iQKlAJqoZJvPdXNxJTOMokgx33LN6KA8mo7sIWZDvezz2hBHkEQHX8DV4a2ucOojuoE0mTT8LmSNmMdIUMMPL273HBaiWYUt3kAA=w3840-h2160-p-k-no-nd-mv',
   'https://lh4.googleusercontent.com/proxy/hxSc80h6Htq3U-4ze-TX8Esb54ecWL6g_BbINw2tSAM4ZM7iA4XOSHrPfgCjki87-ZusKhCnd-NDKHAXf4j-zi1IxUD-ddsEY6G81w=w3840-h2160-p-k-no-nd-mv',
   'https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg',
   'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg',
@@ -24,7 +24,7 @@ const bgArray = [
   'https://cdn.pixabay.com/photo/2017/09/12/11/56/universe-2742113_1280.jpg',
   'https://cdn.pixabay.com/photo/2014/05/22/16/52/pyrenees-351266_1280.jpg',
   'https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_1280.jpg',
-  'https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg',
+  'https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg',*/
 ];
 
 function getRandomInt(max) {
@@ -36,40 +36,40 @@ document
   .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
 
 const mySitesObj = [
-  { url: 'https://music.amazon.com', imgSrc: 'img/music.png' },
+  { url: 'https://music.amazon.com', imgSrc: '../img/music.png' },
   {
     url: 'https://www.twitch.tv/directory/following/live/',
-    imgSrc: 'img/twitch.png',
+    imgSrc: '../img/twitch.png',
   },
-  { url: 'https://watch.spectrum.net/guide', imgSrc: 'img/tv.jpeg' },
+  { url: 'https://watch.spectrum.net/guide', imgSrc: '../img/tv.jpeg' },
   {
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
-    imgSrc: 'img/mdn.jpeg',
+    imgSrc: '../img/mdn.jpeg',
   },
   {
     url: 'https://www.w3schools.com',
-    imgSrc: 'img/w3.png',
+    imgSrc: '../img/w3.png',
   },
   {
     url: 'https://css-tricks.com/',
-    imgSrc: 'img/tricks.jpeg',
+    imgSrc: '../img/tricks.jpeg',
   },
   {
     url: 'https://github.com/skythrilla?tab=repositories',
-    imgSrc: 'img/gh.png',
+    imgSrc: '../img/gh.png',
   },
-  { url: 'http://localhost:3000', imgSrc: 'img/logo192.png' },
+  { url: 'http://localhost:3000', imgSrc: '../img/logo192.png' },
   {
     url: 'https://news.google.com',
-    imgSrc: 'img/news.webp',
+    imgSrc: '../img/news.webp',
   },
-  { url: 'https://gmail.com', imgSrc: 'img/gmail.png' },
-  { url: 'https://calendar.google.com/', imgSrc: 'img/calendar.png' },
-  { url: 'https://drive.google.com/drive/my-drive', imgSrc: 'img/drive.png' },
-  { url: 'https://hangouts.google.com', imgSrc: 'img/hangouts.png' },
-  { url: 'https://www.youtube.com', imgSrc: 'img/youtube.png' },
-  { url: 'https://maps.google.com', imgSrc: 'img/maps.png' },
-  { url: 'https://www.google.com', imgSrc: 'img/google.jpeg' },
+  { url: 'https://gmail.com', imgSrc: '../img/gmail.png' },
+  { url: 'https://calendar.google.com/', imgSrc: '../img/calendar.png' },
+  { url: 'https://drive.google.com/drive/my-drive', imgSrc: '../img/drive.png' },
+  { url: 'https://hangouts.google.com', imgSrc: '../img/hangouts.png' },
+  { url: 'https://www.youtube.com', imgSrc: '../img/youtube.png' },
+  { url: 'https://maps.google.com', imgSrc: '../img/maps.png' },
+  { url: 'https://www.google.com', imgSrc: '../img/google.jpeg' },
 ];
 // mySites
 for (const [key, value] of Object.entries(mySitesObj)) {
