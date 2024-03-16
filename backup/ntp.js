@@ -36,7 +36,7 @@ document
   .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
 
 const mySitesObj = [
-  { url: 'https://music.amazon.com', imgSrc: '../img/music.png' },
+  // { url: 'https://music.amazon.com', imgSrc: '../img/music.png' },
   {
     url: 'https://www.twitch.tv/directory/following/live/',
     imgSrc: '../img/twitch.png',
@@ -65,8 +65,11 @@ const mySitesObj = [
   },
   { url: 'https://gmail.com', imgSrc: '../img/gmail.png' },
   { url: 'https://calendar.google.com/', imgSrc: '../img/calendar.png' },
-  { url: 'https://drive.google.com/drive/my-drive', imgSrc: '../img/drive.png' },
-  { url: 'https://hangouts.google.com', imgSrc: '../img/hangouts.png' },
+  {
+    url: 'https://drive.google.com/drive/my-drive',
+    imgSrc: '../img/drive.png',
+  },
+  // { url: 'https://hangouts.google.com', imgSrc: '../img/hangouts.png' },
   { url: 'https://www.youtube.com', imgSrc: '../img/youtube.png' },
   { url: 'https://maps.google.com', imgSrc: '../img/maps.png' },
   { url: 'https://www.google.com', imgSrc: '../img/google.jpeg' },
@@ -212,26 +215,26 @@ class Link {
 // };
 // document.querySelector('.myForm').appendChild(nodeBtn);
 
-const reBtn = document.createElement('button');
-reBtn.classList = 'bgBtn';
-reBtn.onclick = function reBtn() {
-  document
-    .querySelector('body')
-    .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
-};
-const reImg = document.createElement('img');
-reImg.classList = 'newLink';
-reImg.src = '../img/reload.svg';
-reBtn.appendChild(reImg);
-document.querySelector('.myForm').appendChild(reBtn);
+// const reBtn = document.createElement('button');
+// reBtn.classList = 'bgBtn';
+// reBtn.onclick = function reBtn() {
+//   document
+//     .querySelector('body')
+//     .setAttribute('background', bgArray[getRandomInt(bgArray.length)]);
+// };
+// const reImg = document.createElement('img');
+// reImg.classList = 'newLink';
+// reImg.src = '../img/reload.svg';
+// reBtn.appendChild(reImg);
+// document.querySelector('.myForm').appendChild(reBtn);
 
-const bgBtn = document.createElement('button');
+// const bgBtn = document.createElement('button');
 // bgBtn.innerText = 'No BG';
-bgBtn.classList = 'blkBtn';
-bgBtn.onclick = function bgBtn() {
-  document.querySelector('body').setAttribute('background', '');
-};
-document.querySelector('.myForm').appendChild(bgBtn);
+// bgBtn.classList = 'blkBtn';
+// bgBtn.onclick = function bgBtn() {
+//   document.querySelector('body').setAttribute('background', '');
+// };
+// document.querySelector('.myForm').appendChild(bgBtn);
 
 // myTopSites.style.display === 'none'
 //   ? function resetElement() {
