@@ -8,21 +8,21 @@ const container = document.querySelector('.container');
 const inpt = document.querySelector('#myText');
 
 const bgArray = [
-  './img/sea.jpeg',
-  './img/tropical.jpeg',
-  './img/beach-2089936_1920.jpg',
-  './img/iceland-2111811_1920.jpg',
-  './img/nature-2384_1920.jpg',
-  './img/milky-way-1030765_1920.jpg',
-  './img/beach-4161593_1920.jpg',
-  './img/sea-21649_1920.jpg',
-  './img/drop-3698073_1920.jpg',
-  './img/earth-1756274_1920.jpg',
-  './img/annual-rings-3212803_1920.jpg',
-  './img/hd-wallpaper-gec3d0af63_1920.jpg',
-  './img/white.png',
-  './img/black.png',
-  './img/river-g7f4068bd9_1920.jpg',
+  '../img/sea.jpeg',
+  '../img/tropical.jpeg',
+  '../img/beach-2089936_1920.jpg',
+  '../img/iceland-2111811_1920.jpg',
+  '../img/nature-2384_1920.jpg',
+  '../img/milky-way-1030765_1920.jpg',
+  '../img/beach-4161593_1920.jpg',
+  '../img/sea-21649_1920.jpg',
+  '../img/drop-3698073_1920.jpg',
+  '../img/earth-1756274_1920.jpg',
+  '../img/annual-rings-3212803_1920.jpg',
+  '../img/hd-wallpaper-gec3d0af63_1920.jpg',
+  '../img/white.png',
+  '../img/black.png',
+  '../img/river-g7f4068bd9_1920.jpg',
 ];
 
 function getRandomInt(max) {
@@ -119,38 +119,41 @@ document.querySelector('body').appendChild(rldBtn);
 // }
 
 const mySitesObj = [
-  // { url: 'http://localhost:3000', imgSrc: 'img/logo192.png' },
-  // {
-  //   url: 'https://codepen.io/your-work',
-  //   imgSrc: 'img/codepen.jpeg',
-  // },
-  // {
-  //   url: 'https://css-tricks.com/',
-  //   imgSrc: 'img/tricks.jpeg',
-  // },
-  // { url: 'https://dev.to/', imgSrc: 'img/devto.png' },
-  // { url: 'https://maps.google.com', imgSrc: 'img/maps.png' },
-  // { url: 'https://calendar.google.com/', imgSrc: 'img/calendar.png' },
-  // {
-  //   url: 'https://www.twitch.tv/directory/following/live/',
-  //   imgSrc: 'img/twitch.png',
-  // },
-  { url: 'https://www.google.com', imgSrc: 'img/google.jpeg' },
-  // { url: 'https://www.youtube.com', imgSrc: 'img/youtube.png' },
+  { url: 'http://localhost:3000', imgSrc: '../img/logo192.png' },
+  {
+    url: 'https://codepen.io/your-work',
+    imgSrc: '../img/codepen.jpeg',
+  },
+  {
+    url: 'https://css-tricks.com/',
+    imgSrc: '../img/tricks.jpeg',
+  },
+  { url: 'https://dev.to/', imgSrc: '../img/devto.png' },
+  { url: 'https://maps.google.com', imgSrc: '../img/maps.png' },
+  { url: 'https://calendar.google.com/', imgSrc: '../img/calendar.png' },
+  {
+    url: 'https://www.twitch.tv/directory/following/live/',
+    imgSrc: '../img/twitch.png',
+  },
+  { url: 'https://www.google.com', imgSrc: '../img/google.jpeg' },
+  { url: 'https://www.youtube.com', imgSrc: '../img/youtube.png' },
   {
     url: 'https://news.google.com',
-    imgSrc: 'img/news.webp',
+    imgSrc: '../img/news.webp',
   },
-  { url: 'https://watch.spectrum.net/guide', imgSrc: 'img/tv.jpeg' },
-  { url: 'https://www.gmail.com', imgSrc: 'img/gmail.jpeg' },
-  { url: 'https://drive.google.com/drive/my-drive', imgSrc: 'img/drive.png' },
+  { url: 'https://watch.spectrum.net/guide', imgSrc: '../img/tv.jpeg' },
+  { url: 'https://www.gmail.com', imgSrc: '../img/gmail.jpeg' },
+  {
+    url: 'https://drive.google.com/drive/my-drive',
+    imgSrc: '../img/drive.png',
+  },
   {
     url: 'https://github.com/SchuylerL?tab=repositories',
-    imgSrc: 'img/gh.png',
+    imgSrc: '../img/gh.png',
   },
   {
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
-    imgSrc: 'img/mdn.jpeg',
+    imgSrc: '../img/mdn.jpeg',
   },
 ];
 
@@ -322,7 +325,7 @@ document.querySelector('.blockBtns').appendChild(nodeBtn);
 
 const reImg = document.createElement('img');
 reImg.classList = 'newLink';
-reImg.src = 'img/reload.svg';
+reImg.src = '../img/reload.svg';
 reBtn.appendChild(reImg);
 
 reBtn.addEventListener('click', () =>
