@@ -23,7 +23,6 @@ body {
   backdrop-filter: blur(25px);
   border-radius: 10px;
   box-shadow: 4px 4px 8px 0px inset rgb(0 0 0 /30%);
-  border: white 2px solid;
 }
 .container {
   display: flex;
