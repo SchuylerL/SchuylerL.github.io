@@ -7,6 +7,12 @@
     <link href="dx.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="top-links">
+      <a href="https://schuylerl.github.io/etc/MdxBtns.html">MdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/CTdxBtns.html">CTdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/miscdx.html">Misc</a>
+    </div>
+
     <div class="button-container">
       <button class="copy-button" data-text="99203">99203</button>
       <button class="copy-button" data-text="97802">97802</button>
@@ -35,6 +41,12 @@
       <button class="copy-button" data-text="N184">N184</button>
     </div>
 
+    <div class="bottom-links">
+      <a href="https://schuylerl.github.io/etc/MdxBtns.html">MdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/CTdxBtns.html">CTdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/miscdx.html">Misc</a>
+    </div>
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var copyButtons = document.querySelectorAll('.copy-button');
@@ -52,7 +64,6 @@
           textarea.select();
           document.execCommand('copy');
           document.body.removeChild(textarea);
-          //   alert('Text copied to clipboard: ' + text);
         }
       });
     </script>
