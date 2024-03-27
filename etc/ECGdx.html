@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECG 2IN 15OUT</title>
+    <link href="dx.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top-links">
+      <a href="https://schuylerl.github.io/etc/MdxBtns.html">MdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/CTdxBtns.html">CTdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/miscdx.html">Misc</a>
+      <a href="https://schuylerl.github.io/etc/ECGdx.html">ECG</a>
+    </div>
+
+    <div class="button-container">
+      <button class="copy-button" data-text="93010">93010</button>
+      <button class="copy-button" data-text="B, T">R008</button>
+      <button class="copy-button" data-text="CAD">I25119</button>
+      <button class="copy-button" data-text="CD">I498</button>
+      <button class="copy-button" data-text="CP">R079</button>
+      <button class="copy-button" data-text="HTN">I10</button>
+      <button class="copy-button" data-text="ACS">I240</button>
+    </div>
+
+    <div class="bottom-links">
+      <a href="https://schuylerl.github.io/etc/MdxBtns.html">MdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/CTdxBtns.html">CTdxBtns</a>
+      <a href="https://schuylerl.github.io/etc/miscdx.html">Misc</a>
+      <a href="https://schuylerl.github.io/etc/ECGdx.html">ECG</a>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var copyButtons = document.querySelectorAll('.copy-button');
+        copyButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            var textToCopy = this.getAttribute('data-text');
+            copyToClipboard(textToCopy);
+          });
+        });
+
+        function copyToClipboard(text) {
+          var textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+        }
+      });
+    </script>
+  </body>
+</html>
