@@ -4,7 +4,7 @@ body {
         align-items: center;  */
   /* height: 100vh;
         margin: 0; */
-  background-color: #000;
+  background-color: #fff;
 }
 
 .button-container {
@@ -56,7 +56,7 @@ body {
 .top-links a,
 .bottom-links a {
   text-decoration: none;
-  color: #f0f0f0;
+/*   color: #f0f0f0; */
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
