@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024 Calendar</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      td {
+        cursor: pointer;
+      }
+      .current-day {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>2024 Calendar</h2>
+
+    <table id="calendar">
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      // Function to create the calendar
+      function createCalendar(year) {
+        const tbody = document.querySelector("#calendar tbody");
+        tbody.innerHTML = "";
+
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        for (let month = 0; month < 12; month++) {
+          const daysInMonth = new Date(year, month + 1, 0).getDate();
+          const firstDayOfMonth = new Date(year, month, 1).getDay();
+          let date = 1;
+
+          const monthRow = document.createElement("tr");
+          const monthCell = document.createElement("th");
+          monthCell.textContent = monthNames[month];
+          monthCell.colSpan = 7;
+          monthRow.appendChild(monthCell);
+          tbody.appendChild(monthRow);
+
+          for (let i = 0; i < 6; i++) {
+            const row = document.createElement("tr");
+
+            for (let j = 0; j < 7; j++) {
+              const cell = document.createElement("td");
+              if (i === 0 && j < firstDayOfMonth) {
+                // Empty cells before the first day of the month
+                cell.textContent = "";
+              } else if (date > daysInMonth) {
+                // Empty cells after the last day of the month
+                cell.textContent = "";
+              } else {
+                cell.textContent = date;
+                const monthString = (month + 1).toString().padStart(2, "0");
+                const dateString = date.toString().padStart(2, "0");
+                const formattedDate = `${monthString}/${dateString}/${year
+                  .toString()
+                  .substring(2)}`;
+
+                // Highlight the current day
+                const currentDate = new Date();
+                if (
+                  currentDate.getFullYear() === year &&
+                  currentDate.getMonth() === month &&
+                  currentDate.getDate() === date
+                ) {
+                  cell.classList.add("current-day");
+                }
+
+                cell.addEventListener("click", function () {
+                  // Copy date to clipboard
+                  navigator.clipboard
+                    .writeText(formattedDate)
+                    .then(() => {
+                      console.log("Date copied to clipboard:", formattedDate);
+                      //   alert(`Date copied to clipboard: ${formattedDate}`);
+                    })
+                    .catch((err) => {
+                      console.error("Failed to copy date to clipboard:", err);
+                      alert(
+                        "Failed to copy date to clipboard. Please try again."
+                      );
+                    });
+                });
+                date++;
+              }
+              row.appendChild(cell);
+            }
+
+            tbody.appendChild(row);
+          }
+        }
+      }
+
+      // Initialize calendar with year 2024
+      createCalendar(2024);
+    </script>
+  </body>
+</html>
