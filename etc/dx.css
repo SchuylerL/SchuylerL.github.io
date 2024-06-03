@@ -56,7 +56,7 @@ body {
 .top-links a,
 .bottom-links a {
   text-decoration: none;
-/*   color: #f0f0f0; */
+  /*   color: #f0f0f0; */
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -82,3 +82,8 @@ td {
 .current-day {
   background-color: lightblue;
 }
+/* #calendar 
+td:focus,
+th:focus {
+  background-color: blue;
+} */
