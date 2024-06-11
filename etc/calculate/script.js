@@ -9,12 +9,12 @@ function calculateAndCopy() {
   }
 
   // Calculate 80% of the number
-  let result = (inputNumber * 0.8).toFixed(2);
+  let result = Math.round(inputNumber * 80);
 
   // Display the result
-  document.getElementById(
-    'result'
-  ).innerText = `80% of ${inputNumber} is ${result}`;
+  document.getElementById('result').innerText = `80% of ${inputNumber} is ${
+    inputNumber * 0.8
+  }`;
 
   // Copy the result to the clipboard
   copyToClipboard(result);
